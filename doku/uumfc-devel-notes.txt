@@ -1,0 +1,77 @@
+Ubuntu Unity MindFul Clock, Uumfc
+
+
+PROGRAMMER
+Andreas Ulrich, Lidostrasse 11, 6314 Unterägeri
+<ulrich3110@gmail.com>
+<http://erasand.jimdo.com>
+
+
+BY ORDER OF
+Marcus Möller, Mittelfeldstrasse 19, 8700 Küsnacht ZH
+<marcus.moeller@outlook.com>
+<http://apps.microsoft.com/windows/de-de/app/mindfulclock/58063160-9cc6-4dee-9d92-17df4ce4318a>
+
+
+SYSTEM REQUIREMENTS
+- Integration in Ubuntu Unity, <https://wiki.ubuntu.com/Unity/LauncherAPI>
+- Dynamic Icon in Unity Launcher
+- Status Information, graphical, how mucht time
+
+
+USER INTERFACE
+- Clock with notifications in specified intervals
+- Text messages
+- Audio messages
+- User specified interval
+- User specified text messages
+- User specified audio messages
+
+
+PROGRAMMING LANGUAGE
+- Python
+- wxPython (GUI)
+- PyGame (Sound)
+
+
+OOP
+
+UumfcGUI (wx.Frame)
+ |
+ |--UumfcData ()
+ |
+ |--UumfcUnity ()
+ |
+ |--UumfcSound ()
+ |
+ |--UumfcText (wx.Dialog)
+ 
+
+UumfcGUI
+- Text entry for time interval in minutes.
+- Buttons to increase or decrease the minutes.
+- Audio file description.
+- Buttons to change audio file and for sound preview.
+- Activate or deactivate UUmfc.
+- Close and Minimize UUmfc.
+
+UumfcData
+- Specification: Time interval, text message, audio file.
+- Load at startup.
+- Save at program end.
+
+UumfcUnity
+- Launcher integration.
+- Dynamic program icon.
+- status indicator in Launcher of the remaining time.
+
+UumfcSound
+- Play specified audio file with PyGame.
+
+UumfcText
+- Pop up specified text.
+- Time control, close pop up.
+
+
+08.11.2013, Andreas Ulrich
+
