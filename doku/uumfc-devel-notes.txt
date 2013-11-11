@@ -38,13 +38,11 @@ OOP
 
 UumfcGUI (wx.Frame)
  |
- |--UumfcData ()
+ |--UumfcData()
  |
- |--UumfcUnity ()
+ |--UumfcMsg(wx.Dialog)
  |
- |--UumfcSound ()
- |
- |--UumfcText (wx.Dialog)
+ |--UumfcUnity()
  
 
 UumfcGUI
@@ -54,9 +52,12 @@ UumfcGUI
 - Buttons to change audio file and for sound preview.
 - Activate or deactivate UUmfc.
 - Close and Minimize UUmfc.
+- Timer event for text and sound notification
+- Sound with PyGame
 
 UumfcData
-- Specification: Time interval, text message, audio file.
+- User Specifications.
+- Program Options.
 - Load at startup.
 - Save at program end.
 
@@ -65,12 +66,9 @@ UumfcUnity
 - Dynamic program icon.
 - status indicator in Launcher of the remaining time.
 
-UumfcSound
-- Play specified audio file with PyGame.
-
 UumfcText
-- Pop up specified text.
-- Time control, close pop up.
+- Pop up message text.
+- Time control, close pop up. (future call event in frame ..)
 
 
 08.11.2013, Andreas Ulrich
