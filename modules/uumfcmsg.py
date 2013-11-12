@@ -72,7 +72,7 @@ class UumfcMsg(wx.Dialog):
                            title=title,
                            size=size,
                            style=wx.DEFAULT_DIALOG_STYLE |
-                                 wx.STAY_ON_TOP)
+                                 wx.STAY_ON_TOP | wx.RESIZE_BORDER)
         # Text notification.
         self.__caption = wx.StaticText(self, label=text)
         # Set font.

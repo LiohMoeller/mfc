@@ -6,8 +6,10 @@ you the  opportunity to pause for a moment and enjoy the present of
 Mindfulness.
 
 
-OPERATING SYSTEM    
-- Uumfc is designed for Ubuntu with the Unity desktop.
+OPERATING SYSTEM
+- Uumfc is programmed in Python wiht the GUI- toolkit wxPython. It runs
+  on all platforms which support python and wxpython.
+- Uumfc is specially designed for Ubuntu with the Unity desktop.
 
 
 DOWNLOAD FROM GITHUB
@@ -18,9 +20,13 @@ MANUALLY INSTALLATION
 - Requirements: Python 2.7, wxPython 2.8, PyGame 1.9.
   Command line for the terminal:
     sudo apt-get install python python-wxgtk2.8 python-pygame
-- Unzip the ZIP file into the desired folder.
-- Create a starter for the python module <..path/modules/uumfcgui.py>.
-- The start module must running in the directory <..path/modules>.
+- Unzip the ZIP file into the desired program directory,
+  for example  <~/uumfc>.
+- Create a starter for the python module uumfcgui.py,
+  for example  <~/uumfc/modules/uumfcgui.py>.
+- The start module must running in the directory of uumfcgui.py,
+  for example  <~/uumfc/modules>.
+
 
 KNOWN PROBLEMS
 - By the error message "there is no soundcard" install the package
@@ -28,12 +34,23 @@ KNOWN PROBLEMS
   Command line for the terminal:  sudo apt-get install timidity
 
 
+TRUBBLESHOTTING
+- Reset all setting: Delete the configuarion, the hidden file <.uumfc>
+  in the home directory.
+
+
 MANUAL REMOVAL
-- Delete the program directory.
+- Delete the program directory,
+  for example  <~/uumfc>.
+- If the settings are to be removed: Delete the hidden file <.uumfc> in
+  the home directory.
 
 
-RELEASE NOTES VERSION 0 / alpha
--
+RELEASE NOTES VERSION 0 / beta
+- Cross over Version of MindFlucClock.
+- Notification with text or sound.
+- Specification by user: Time interval in minutes, text notification,
+  sound notification.
 
 
 CONCEPT, DESIGN
@@ -41,18 +58,22 @@ CONCEPT, DESIGN
   <marcus.moeller@outlook.com>
   <http://apps.microsoft.com/windows/de-de/app/mindfulclock/58063160-9cc6-4dee-9d92-17df4ce4318a>
 
+
 PROGRAM CODE
   Andreas Ulrich
   <http://erasand.jimdo.com/kontakt/>
   <ulrich3110@gmail.com>
 
+
 ART WORK
   Marcus Möller (Program icon)
   The Tango Project (Button icons)
 
+
 SOUND WORK
   <http://soundbible.com/2062-Metal-Gong-1.html>
-  Metal_Gong-Dianakc-109711828.wav
+  <Metal_Gong-Dianakc-109711828.wav>
   License Attribution 3.0
 
-09.11.2013 / Andreas Ulrich
+
+12.11.2013 / Andreas Ulrich

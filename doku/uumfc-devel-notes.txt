@@ -34,8 +34,12 @@ PROGRAMMING LANGUAGE
 - PyGame (Sound)
 
 
-OOP
+VERSION NUMBERS
+0: Development version.
+1: First version with full ubuntu unity integration
 
+
+OOP
 UumfcGUI (wx.Frame)
  |
  |--UumfcData()
@@ -54,22 +58,21 @@ UumfcGUI
 - Close and Minimize UUmfc.
 - Timer event for text and sound notification
 - Sound with PyGame
+- Load settings at startup, save settings at program end.
 
 UumfcData
 - User Specifications.
 - Program Options.
-- Load at startup.
-- Save at program end.
+- Get and set settings as text.
+
+UumfcMsg
+- Pop up message text.
 
 UumfcUnity
 - Launcher integration.
 - Dynamic program icon.
 - status indicator in Launcher of the remaining time.
 
-UumfcText
-- Pop up message text.
-- Time control, close pop up. (future call event in frame ..)
 
-
-08.11.2013, Andreas Ulrich
+12.11.2013, Andreas Ulrich
 

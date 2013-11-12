@@ -104,11 +104,16 @@ class UumfcGUI(wx.Frame):
     '''
 
     def __init__(self):
-        # Data object.  Get frame title, frame size and icon.
+        # Data object.
         self.__data = UumfcData()
+        # Load saved datas.
+        self.config_load()
+        # Get frame title, frame size and icon.
         title = self.__data.get_('frame_title')
         size = self.__data.get_('frame_size')
         icon = self.__data.get_('icon_name')
+        # Program version.
+        title = title + ' 0 / beta'
         # Subclass
         wx.Frame.__init__(self,
                           parent=None,
@@ -148,6 +153,8 @@ class UumfcGUI(wx.Frame):
         self.Bind(event=wx.EVT_TIMER,
                   handler=self.on_timer,
                   source=self.__timer)
+        # Exit bindings.
+        self.Bind(event=wx.EVT_CLOSE, handler=self.on_system_close)
         # Layout
         vbox = wx.BoxSizer(wx.VERTICAL)
         vbox.Add(item=intervalbox,
@@ -172,6 +179,36 @@ class UumfcGUI(wx.Frame):
         # Centre window, show window.
         self.Center()
         self.Show()
+
+    def config_load(self):
+        '''Load the settings with wx.config.'''
+        # Config file
+        config = wx.Config(self.__data.get_('config_file'))
+        # Get the default dictionairy as text
+        textdic = self.__data.get_text_dic()
+        # Read text, textdic as default.
+        newdic = config.Read(key='dic', defaultVal=textdic)
+        # Set text as new dictionairy.
+        self.__data.set_text_dic(newdic)
+
+    def config_save(self):
+        '''Save the settings with wx.config.'''
+        # Config file
+        config = wx.Config(self.__data.get_('config_file'))
+        # Set text notification.
+        self.__data.set_('text_notification', self.__msgtext.GetValue())
+        # Set sound notification.
+        self.__data.set_('sound_notification', self.__sound)
+        # Set time interval.
+        if self.__interval != 'dev':
+            self.__data.set_('def_interval', self.__interval)
+        # Set frame size.
+        size = self.GetSize()
+        self.__data.set_('frame_size', (size[0], size[1]))
+        # Get data dictionariy as text.
+        textdic = self.__data.get_text_dic()
+        # Write text.
+        config.Write(key='dic', value=textdic)
 
     def get_integer_interval(self):
         '''Convert time interval as text to a integer value.'''
@@ -389,7 +426,6 @@ class UumfcGUI(wx.Frame):
 
     def on_exit(self, event):
         '''Event for button, exit program.'''
-        print('TODO: SAVE THE USER SETTINGS.')
         self.Close()
 
     def on_increase(self, event):
@@ -434,16 +470,16 @@ class UumfcGUI(wx.Frame):
         interval = self.get_integer_interval()
         if interval != 'dev':
             # Time interval in seconds
-            self.__interval = interval * 60.0
+            self.__seconds = interval * 60.0
             # Start and end time, UTC in seconds
             self.__start = int(time.time())
-            self.__end = self.__start + self.__interval
+            self.__end = self.__start + self.__seconds
         else:
-            self.__interval = 5.0
+            self.__seconds = 5.0
             self.__start = int(time.time())
-            self.__end = self.__start + self.__interval
+            self.__end = self.__start + self.__seconds
         #  start timer
-        self.__timer.Start(100)
+        self.__timer.Start(self.__data.get_('wxtimer'))
         # Hide start icon, show stop icon
         self.__btnstart.Enable(False)
         self.__btnstop.Enable(True)
@@ -457,18 +493,24 @@ class UumfcGUI(wx.Frame):
         self.__btnstop.Enable(False)
         self.__gauge.SetValue(0)
 
+    def on_system_close(self, event):
+        '''Event before close the frame.'''
+        # Save the settings
+        self.config_save()
+        event.Skip()
+
     def on_timer(self, event):
         '''Event for timer, the MindFulClock.'''
         timenow = int(time.time())
         if timenow < self.__end:
             # End is not reached.
             progress = timenow - self.__start
-            value = (self.__gaugerange / self.__interval) * progress
+            value = (self.__gaugerange / self.__seconds) * progress
             self.__gauge.SetValue(value)
         elif timenow >= self.__end:
             # End is reached, start new interval.
             self.__start = int(time.time())
-            self.__end = self.__start + self.__interval
+            self.__end = self.__start + self.__seconds
             self.__gauge.SetValue(0)
             # Show notification, play sound.
             self.pygame_sound()
@@ -512,6 +554,10 @@ class UumfcGUI(wx.Frame):
                                   text=text,
                                   font=font)
             dlg.ShowModal()
+            # Set dialog size
+            size = dlg.GetSize()
+            self.__data.set_('msg_size', (size[0], size[1]))
+            # Destroy dialogue.
             dlg.Destroy()
 
 

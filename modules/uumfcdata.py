@@ -76,7 +76,7 @@ class UumfcData():
     def set_default(self):
         '''Set the default dictionairy.'''
         # Frame Title, icon name, frame size.
-        t = 'Ubuntu Unity MindFulClock 0 / alpha'
+        t = 'Ubuntu Unity MindFulClock'
         self.__dic['frame_title'] = t
         self.__dic['icon_name'] = '../icons/Icon.253760.png'
         self.__dic['frame_size'] = (400, 360)
@@ -122,11 +122,19 @@ class UumfcData():
         self.__dic['sound_notification'] = t
         # Value for the gauge, to show the progress.
         self.__dic['gauge'] = 100
+        # Value for the wx.Timer.
+        self.__dic['wxtimer'] = 100
+        # Name of the config file.
+        self.__dic['config_file'] = 'uumfc'
 
     def set_text_dic(self, text):
         '''Set the text as new dictionairy.'''
         # Convert text into a dictionairy.
-        textdic = eval(text, {})
+        try:
+            text = str(text)
+            textdic = eval(text, {})
+        except NameError:
+            textdic = {}
         # Set default dictionairy.
         self.set_default()
         for key, value in self.__dic.items():
@@ -147,40 +155,39 @@ class UumfcData():
                              'icon_stop',
                              'icon_minimize',
                              'icon_exit',
-                             'icon_close',
-                             'sound_notification'):
-                    if os.path.exists(text):
+                             'icon_close'):
+                    if os.path.exists(newval):
                         # The new file exists, set the value.
+                        self.__dic[key] = newval
+                elif key == 'sound_notification':
+                    if newval:
+                        # Soundfile is set.
+                        if os.path.exists(newval):
+                            # The file exists, set the value.
+                            self.__dic[key] = newval
+                    else:
+                        # Soundfile is not set, no sound.
                         self.__dic[key] = newval
                 elif key in ('frame_size',
                              'msg_size'):
                     # Check and correct the size.
                     try:
                         w, h = newval
-                        if w < 100:
-                            w = 100
-                        elif w > 2000:
-                            w = 2000
-                        if h < 100:
-                            h = 100
-                        elif h > 2000:
-                            h = 2000
+                        w, h = int(w), int(h)
                         self.__dic[key] = (w, h)
-                    except TypeError:
+                    except (ValueError, TypeError):
                         pass
                 elif key in ('def_interval',
                              'min_interval',
                              'max_interval',
                              'gui_borderdist',
-                             'gauge'):
+                             'gauge',
+                             'wxtimer'):
                     # Check and correct the integer.
                     try:
                         n = int(newval)
-                        if n < 1:
-                            n = 1
-                        elif n > 300:
-                            n = 2000
-                    except ValueError:
+                        self.__dic[key] = n
+                    except (ValueError, TypeError):
                         pass
                 elif key == 'gui_borderstyle':
                     # Check the border name.
@@ -194,10 +201,7 @@ class UumfcData():
                     try:
                         osiz, ofam, osty, owei = self.__dic[key]
                         nsize, nfamily, nstyle, nweight = newval
-                        if nsize < 1:
-                            nsize = 1
-                        elif nsize > 100:
-                            nsize = 100
+                        nsize = int(nsize)
                         if nfamily in ('decorative',
                                        'default',
                                        'modern',
@@ -211,5 +215,5 @@ class UumfcData():
                         if nweight in ('normal', 'light', 'bold'):
                             owei = nweight
                         self.__dic[key] = (nsize, ofam, osty, owei)
-                    except TypeError:
+                    except (ValueError, TypeError):
                         pass
