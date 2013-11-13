@@ -113,7 +113,7 @@ class UumfcGUI(wx.Frame):
         size = self.__data.get_('frame_size')
         icon = self.__data.get_('icon_name')
         # Program version.
-        title = title + ' 0 / beta'
+        title = title + ' 1 / alpha'
         # Subclass
         wx.Frame.__init__(self,
                           parent=None,

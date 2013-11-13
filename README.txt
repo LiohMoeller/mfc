@@ -16,12 +16,20 @@ DOWNLOAD FROM GITHUB
 - Download the repository with the <Download ZIP> button.
 
 
-MANUALLY INSTALLATION
+INSTALLATION FROM SOURCECODE DISTRIBUTION
+- Unzip the ZIP file into the desired program directory,
+  for example  <~/Downloads/uumfc-master>.
+- Change into this directory.
+- Build 1st a sourcecode distribution, command line for the terminal:
+  python setup.py sdist
+  rm 'Unity Ubuntu MindfulClock-1'
+- Install the sourcecode distribution, command line for the terminal:
+  
+- 
 - Requirements: Python 2.7, wxPython 2.8, PyGame 1.9.
   Command line for the terminal:
     sudo apt-get install python python-wxgtk2.8 python-pygame
-- Unzip the ZIP file into the desired program directory,
-  for example  <~/uumfc>.
+
 - Create a starter for the python module uumfcgui.py,
   for example  <~/uumfc/modules/uumfcgui.py>.
 - The start module must running in the directory of uumfcgui.py,
