@@ -1,0 +1,109 @@
+tygrys@MIDI:~/Downloads/uumfc_src_dist-1 / alpha$ sudo ./setup.py install
+[sudo] password for tygrys: 
+running install
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/uumfc
+copying uumfc/unitest.py -> build/lib.linux-x86_64-2.7/uumfc
+copying uumfc/data.py -> build/lib.linux-x86_64-2.7/uumfc
+copying uumfc/msg.py -> build/lib.linux-x86_64-2.7/uumfc
+copying uumfc/__init__.py -> build/lib.linux-x86_64-2.7/uumfc
+copying uumfc/gui.py -> build/lib.linux-x86_64-2.7/uumfc
+creating build/lib.linux-x86_64-2.7/uumfc/doku
+copying uumfc/doku/gpl-3-0_en.html -> build/lib.linux-x86_64-2.7/uumfc/doku
+copying uumfc/doku/gpl-3-0_de.html -> build/lib.linux-x86_64-2.7/uumfc/doku
+creating build/lib.linux-x86_64-2.7/uumfc/icons
+copying uumfc/icons/Icon.253760.png -> build/lib.linux-x86_64-2.7/uumfc/icons
+creating build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/list-remove.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/media-playback-start.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/weather-clear.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/list-add.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/process-stop.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/go-down.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/media-playback-stop.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/system-search.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+copying uumfc/icons/16/system-log-out.png -> build/lib.linux-x86_64-2.7/uumfc/icons/16
+creating build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/list-remove.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/media-playback-start.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/weather-clear.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/list-add.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/process-stop.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/go-down.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/media-playback-stop.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/system-search.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+copying uumfc/icons/22/system-log-out.png -> build/lib.linux-x86_64-2.7/uumfc/icons/22
+creating build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/list-remove.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/media-playback-start.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/weather-clear.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/list-add.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/process-stop.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/go-down.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/media-playback-stop.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/system-search.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+copying uumfc/icons/32/system-log-out.png -> build/lib.linux-x86_64-2.7/uumfc/icons/32
+creating build/lib.linux-x86_64-2.7/uumfc/sounds
+copying uumfc/sounds/Metal_Gong-Dianakc-109711828.wav -> build/lib.linux-x86_64-2.7/uumfc/sounds
+running build_scripts
+creating build/scripts-2.7
+copying and adjusting uumfcrun -> build/scripts-2.7
+changing mode of build/scripts-2.7/uumfcrun from 644 to 755
+running install_lib
+creating /usr/local/lib/python2.7/dist-packages/uumfc
+copying build/lib.linux-x86_64-2.7/uumfc/unitest.py -> /usr/local/lib/python2.7/dist-packages/uumfc
+copying build/lib.linux-x86_64-2.7/uumfc/data.py -> /usr/local/lib/python2.7/dist-packages/uumfc
+copying build/lib.linux-x86_64-2.7/uumfc/msg.py -> /usr/local/lib/python2.7/dist-packages/uumfc
+creating /usr/local/lib/python2.7/dist-packages/uumfc/icons
+copying build/lib.linux-x86_64-2.7/uumfc/icons/Icon.253760.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons
+creating /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/list-remove.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/media-playback-start.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/weather-clear.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/list-add.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/process-stop.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/go-down.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/media-playback-stop.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/system-search.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+copying build/lib.linux-x86_64-2.7/uumfc/icons/16/system-log-out.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/16
+creating /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/list-remove.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/media-playback-start.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/weather-clear.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/list-add.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/process-stop.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/go-down.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/media-playback-stop.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/system-search.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+copying build/lib.linux-x86_64-2.7/uumfc/icons/32/system-log-out.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/32
+creating /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/list-remove.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/media-playback-start.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/weather-clear.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/list-add.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/process-stop.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/go-down.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/media-playback-stop.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/system-search.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/icons/22/system-log-out.png -> /usr/local/lib/python2.7/dist-packages/uumfc/icons/22
+copying build/lib.linux-x86_64-2.7/uumfc/__init__.py -> /usr/local/lib/python2.7/dist-packages/uumfc
+creating /usr/local/lib/python2.7/dist-packages/uumfc/doku
+copying build/lib.linux-x86_64-2.7/uumfc/doku/gpl-3-0_en.html -> /usr/local/lib/python2.7/dist-packages/uumfc/doku
+copying build/lib.linux-x86_64-2.7/uumfc/doku/gpl-3-0_de.html -> /usr/local/lib/python2.7/dist-packages/uumfc/doku
+copying build/lib.linux-x86_64-2.7/uumfc/gui.py -> /usr/local/lib/python2.7/dist-packages/uumfc
+creating /usr/local/lib/python2.7/dist-packages/uumfc/sounds
+copying build/lib.linux-x86_64-2.7/uumfc/sounds/Metal_Gong-Dianakc-109711828.wav -> /usr/local/lib/python2.7/dist-packages/uumfc/sounds
+byte-compiling /usr/local/lib/python2.7/dist-packages/uumfc/unitest.py to unitest.pyc
+byte-compiling /usr/local/lib/python2.7/dist-packages/uumfc/data.py to data.pyc
+byte-compiling /usr/local/lib/python2.7/dist-packages/uumfc/msg.py to msg.pyc
+byte-compiling /usr/local/lib/python2.7/dist-packages/uumfc/__init__.py to __init__.pyc
+byte-compiling /usr/local/lib/python2.7/dist-packages/uumfc/gui.py to gui.pyc
+running install_scripts
+copying build/scripts-2.7/uumfcrun -> /usr/local/bin
+changing mode of /usr/local/bin/uumfcrun to 755
+running install_egg_info
+Writing /usr/local/lib/python2.7/dist-packages/uumfc_src_dist-1._.alpha.egg-info
+

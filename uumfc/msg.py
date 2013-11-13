@@ -27,16 +27,11 @@
 # If not, see <http://www.gnu.org/licenses/>.
 
 
-import locale
 import wx
 
 
-# name for translations texts
-_ = wx.GetTranslation
-
-
-class UumfcMsg(wx.Dialog):
-    '''UumfcMsg(parent, title, size, icon, text)
+class Msg(wx.Dialog):
+    '''uumfc.Msg(parent, title, size, icon, text)
        Show the text notification for the Ubuntu Unity MindFulClock.
        parent = wx.window
        title = 'dialog title'
@@ -156,12 +151,12 @@ class wxTestFrame(wx.Frame):
     def show_dlg(self):
         '''Show dialogue.'''
         t = 'Please enter your message ..'
-        dlg = UumfcMsg(parent=self,
-                       title='Ubuntu Unity MindFulClock',
-                       size=(300, 300),
-                       icon='../icons/32/weather-clear.png',
-                       text=t,
-                       font=(20, 'default', 'italic', 'bold'))
+        dlg = Msg(parent=self,
+                  title='Ubuntu Unity MindFulClock',
+                  size=(300, 300),
+                  icon='icons/32/weather-clear.png',
+                  text=t,
+                  font=(20, 'default', 'italic', 'bold'))
         dlg.ShowModal()
         dlg.Destroy()
 
@@ -177,14 +172,5 @@ class wxTestFrame(wx.Frame):
 
 if __name__ == '__main__':
     app = wx.App()
-    wxloc = wx.Locale()
-    wxloc.AddCatalogLookupPathPrefix('../in18')
-    wxlang = locale.getdefaultlocale()
-    wxlang = wxlang[0][:2]
-    if locale.getdefaultlocale()[0][:2] == 'de':
-        wxloc.AddCatalog('uumfc_de')
     frame = wxTestFrame()
     app.MainLoop()
-
-
-

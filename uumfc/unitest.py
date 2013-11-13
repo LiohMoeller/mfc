@@ -28,38 +28,19 @@
 
 
 import unittest
-from uumfcdata import UumfcData
+from data import Data
 
 
 class Test01_UumfcData(unittest.TestCase):
-    '''Unittest for UumfcData().'''
+    '''Unittest for uumfc.Data().'''
 
     def setUp(self):
         '''Prepare test.'''
-        s1 = "{'min_interval': 1, 'gui_borderstyle': 'simple', 'sound_n"
-        s2 = "otification': '../sounds/Metal_Gong-Dianakc-109711828.wav"
-        s3 = "', 'frame_size': (400, 360), 'icon_start': '../icons/32/m"
-        s4 = "edia-playback-start.png', 'msg_title': 'Ubuntu Unity Mind"
-        s5 = "FulClock', 'icon_name': '../icons/Icon.253760.png', 'wxti"
-        s6 = "mer': 100, 'gauge': 100, 'icon_close': '../icons/32/weath"
-        s7 = "er-clear.png', 'gui_borderdist': 5, 'msg_font': (20, 'def"
-        s8 = "ault', 'italic', 'bold'), 'icon_increase': '../icons/16/l"
-        s9 = "ist-add.png', 'text_notification': 'Please enter your mes"
-        sa = "sage ..', 'config_file': 'uumfc', 'icon_stop': '../icons/"
-        sb = "32/media-playback-stop.png', 'max_interval': 300, 'def_in"
-        sc = "terval': 30, 'msg_size': (300, 300), 'frame_title': 'Ubun"
-        sd = "tu Unity MindFulClock 0 / alpha', 'icon_minimize': '../ic"
-        se = "ons/32/go-down.png', 'icon_decrease': '../icons/16/list-r"
-        sf = "emove.png', 'icon_change': '../icons/16/system-search.png"
-        sg = "', 'icon_preview': '../icons/16/media-playback-start.png'"
-        sh = ", 'icon_exit': '../icons/32/system-log-out.png'}"
-        self.__textdic = s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + sa
-        self.__textdic = self.__textdic + sb + sc + sd + se + sf + sg
-        self.__textdic = self.__textdic + sh
+        self.__textdic = "{'min_interval': 1, 'gui_borderstyle': 'simple', 'sound_notification': 'sounds/Metal_Gong-Dianakc-109711828.wav', 'frame_size': (400, 360), 'icon_start': 'icons/32/media-playback-start.png', 'msg_title': 'Ubuntu Unity MindFulClock', 'icon_name': 'icons/Icon.253760.png', 'wxtimer': 100, 'gauge': 100, 'icon_close': 'icons/32/weather-clear.png', 'gui_borderdist': 5, 'msg_font': (20, 'default', 'italic', 'bold'), 'icon_increase': 'icons/16/list-add.png', 'text_notification': 'Please enter your message ..', 'config_file': 'uumfc', 'icon_stop': 'icons/32/media-playback-stop.png', 'max_interval': 300, 'def_interval': 30, 'msg_size': (300, 300), 'frame_title': 'Ubuntu Unity MindFulClock', 'icon_minimize': 'icons/32/go-down.png', 'icon_decrease': 'icons/16/list-remove.png', 'icon_change': 'icons/16/system-search.png', 'icon_preview': 'icons/16/media-playback-start.png', 'icon_exit': 'icons/32/system-log-out.png'}"
 
     def test_get_(self):
-        '''Testing  UumfcData.get_(key).'''
-        data = UumfcData()
+        '''Testing  uumfc.Data.get_(key).'''
+        data = Data()
         data.set_(key='test1', data=123.7)
         data.set_(key='test2', data='456kdjvnö')
         data.set_(key=0xff, data=0o11)
@@ -71,14 +52,15 @@ class Test01_UumfcData(unittest.TestCase):
         self.failUnlessEqual(first=r, second=0o11)
 
     def test_get_text_dic(self):
-        '''Testing  UumfcData.get_text_dic().'''
-        data = UumfcData()
+        '''Testing  uumfc.Data.get_text_dic().'''
+        data = Data()
         r = data.get_text_dic()
-        self.failUnlessEqual(first=r, second=self.__textdic)
+        print('UumfcData.get_text_dic(): %s' % (r))
+        self.failIfEqual(first=r, second=None)
 
     def test_set_(self):
-        '''Testing  UumfcData.set_(key, data).'''
-        data = UumfcData()
+        '''Testing  uumfc.Data.set_(key, data).'''
+        data = Data()
         r = data.set_(key='test1', data=123.7)
         self.failUnlessEqual(first=r, second=None)
         r = data.set_(key='test2', data='456kdjvnö')
@@ -87,14 +69,14 @@ class Test01_UumfcData(unittest.TestCase):
         self.failUnlessEqual(first=r, second=None)
 
     def test_set_default(self):
-        '''Testing  UumfcData.set_default().'''
-        data = UumfcData()
+        '''Testing  uumfc.Data.set_default().'''
+        data = Data()
         r = data.set_default()
         self.failUnlessEqual(first=r, second=None)
 
     def test_set_text_dic(self):
-        '''Testing  UumfcData.set_text_dic(text).'''
-        data = UumfcData()
+        '''Testing  uumfc.Data.set_text_dic(text).'''
+        data = Data()
         textdic = data.get_text_dic()
         r = data.set_text_dic(textdic)
         self.failUnlessEqual(first=r, second=None)
@@ -113,7 +95,7 @@ class Test01_UumfcData(unittest.TestCase):
         r = data.get_('frame_title')
         self.failUnlessEqual(first=r, second='123')
         r = data.get_('icon_name')
-        self.failUnlessEqual(first=r, second='../icons/Icon.253760.png')
+        self.failUnlessEqual(first=r, second='icons/Icon.253760.png')
         r = data.get_('frame_size')
         self.failUnlessEqual(first=r, second=(400, 360))
         r = data.get_('msg_font')

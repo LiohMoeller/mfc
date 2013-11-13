@@ -32,17 +32,26 @@ import os
 import time
 import wx
 import pygame
-from uumfcdata import UumfcData
-from uumfcmsg import UumfcMsg
+from data import Data
+from msg import Msg
 
 
 # name for translations texts
 _ = wx.GetTranslation
 
 
-class UumfcGUI(wx.Frame):
-    '''UumfcGUI()
+class GUI(wx.Frame):
+    '''uumfc.GUI()
        GUI of the Ubuntu Unity MindFulClock.
+
+    config_load()
+    Load the settings with wx.config.
+
+    config_save()
+    Save the settings with wx.config.
+
+    determine_path()
+    Borrowed from wxglade.py, get the package directory.
 
     get_integer_interval
     Convert time interval as text to a integer value.
@@ -89,7 +98,10 @@ class UumfcGUI(wx.Frame):
     on_stop(event)
     Event for button, stop the clock.
 
-    on_timer(self, event):
+    on_system_close(event)
+    Event before close the frame.
+
+    on_timer(event)
     Event for timer, the MindFulClock.
 
     pygame_sound()
@@ -105,13 +117,17 @@ class UumfcGUI(wx.Frame):
 
     def __init__(self):
         # Data object.
-        self.__data = UumfcData()
+        self.__data = Data()
+        # Package directory
+        self.__dir = self.determine_path()
+        # Internationalisation
+        self.set_in18()
         # Load saved datas.
         self.config_load()
         # Get frame title, frame size and icon.
         title = self.__data.get_('frame_title')
         size = self.__data.get_('frame_size')
-        icon = self.__data.get_('icon_name')
+        icon = os.path.join(self.__dir, self.__data.get_('icon_name'))
         # Program version.
         title = title + ' 1 / alpha'
         # Subclass
@@ -138,7 +154,8 @@ class UumfcGUI(wx.Frame):
             self.__bdist = 5
         # Set attributes for time interval and sound file.
         self.__interval = self.__data.get_('def_interval')
-        self.__sound = self.__data.get_('sound_notification')
+        self.__sound = os.path.join(self.__dir,
+                               self.__data.get_('sound_notification'))
         # Entry for time interval.  Buttons to increase or decrease
         # time interval.
         intervalbox = self.init_interval()
@@ -210,6 +227,18 @@ class UumfcGUI(wx.Frame):
         # Write text.
         config.Write(key='dic', value=textdic)
 
+    def determine_path(self):
+        '''Borrowed from wxglade.py, get the package directory.'''
+        try:
+            root = __file__
+            if os.path.islink(root):
+                root = os.path.realpath(root)
+            return os.path.dirname (os.path.abspath(root))
+        except:
+            print 'I am sorry, but something is wrong.  There is no '
+            print '__file__ variable. Please contact the author.'
+            sys.exit()
+
     def get_integer_interval(self):
         '''Convert time interval as text to a integer value.'''
         # Get text from entry.
@@ -231,22 +260,23 @@ class UumfcGUI(wx.Frame):
         t = _(u'Clock control.')
         label = wx.StaticText(parent=self, label=t)
         # Start bitmap button.
-        icon = self.__data.get_('icon_start')
+        icon = os.path.join(self.__dir, self.__data.get_('icon_start'))
         self.__btnstart = wx.BitmapButton(parent=self,
                                           bitmap=wx.Bitmap(icon))
         self.__btnstart.SetToolTip(wx.ToolTip(_(u'Start Clock')))
         # Stop bitmap button.
-        icon = self.__data.get_('icon_stop')
+        icon = os.path.join(self.__dir, self.__data.get_('icon_stop'))
         self.__btnstop = wx.BitmapButton(parent=self,
                                          bitmap=wx.Bitmap(icon))
         self.__btnstop.SetToolTip(wx.ToolTip(_(u'Stop Clock')))
         # Minimize bitmap button.
-        icon = self.__data.get_('icon_minimize')
+        icon = os.path.join(self.__dir,
+                            self.__data.get_('icon_minimize'))
         minimize = wx.BitmapButton(parent=self,
                                    bitmap=wx.Bitmap(icon))
         minimize.SetToolTip(wx.ToolTip(_(u'Minimize Clock')))
         # Exit bitmap button.
-        icon = self.__data.get_('icon_exit')
+        icon = os.path.join(self.__dir, self.__data.get_('icon_exit'))
         exit_ = wx.BitmapButton(parent=self,
                                    bitmap=wx.Bitmap(icon))
         exit_.SetToolTip(wx.ToolTip(_(u'Exit Clock')))
@@ -294,12 +324,14 @@ class UumfcGUI(wx.Frame):
         self.__txtinterval = wx.TextCtrl(parent=self,
                                          value=str(self.__interval))
         # Increase bitmap button.
-        icon = self.__data.get_('icon_increase')
+        icon = os.path.join(self.__dir,
+                            self.__data.get_('icon_increase'))
         increase = wx.BitmapButton(parent=self,
                                    bitmap=wx.Bitmap(icon))
         increase.SetToolTip(wx.ToolTip(_(u'Increase time')))
         # Decrease bitmap button.
-        icon = self.__data.get_('icon_decrease')
+        icon = os.path.join(self.__dir,
+                            self.__data.get_('icon_decrease'))
         decrease = wx.BitmapButton(parent=self,
                                    bitmap=wx.Bitmap(icon))
         decrease.SetToolTip(wx.ToolTip(_(u'Decrease time')))
@@ -333,12 +365,13 @@ class UumfcGUI(wx.Frame):
         t = _(u'Sound notification.')
         label = wx.StaticText(parent=self, label=t)
         # Sound change button
-        icon = self.__data.get_('icon_change')
+        icon = os.path.join(self.__dir, self.__data.get_('icon_change'))
         change = wx.BitmapButton(parent=self,
                                  bitmap=wx.Bitmap(icon))
         change.SetToolTip(wx.ToolTip(_(u'Change sound file')))
         # Sound preview button
-        icon = self.__data.get_('icon_preview')
+        icon = os.path.join(self.__dir,
+                            self.__data.get_('icon_preview'))
         preview = wx.BitmapButton(parent=self,
                                   bitmap=wx.Bitmap(icon))
         preview.SetToolTip(wx.ToolTip(_(u'Preview sound')))
@@ -538,6 +571,18 @@ class UumfcGUI(wx.Frame):
             # Set current value as new default value.
             self.__interval = interval
 
+    def set_in18(self):
+        '''Set the internationalization of Uumfc.'''
+        wxloc = wx.Locale()
+        dir_ = os.path.join(self.__dir, 'in18')
+        wxloc.AddCatalogLookupPathPrefix(dir_)
+        # get system language ('xx_XX', 'CHARSET').
+        wxlang = locale.getdefaultlocale()
+        wxlang = wxlang[0][:2]
+        # get system language ('xx_XX', 'CHARSET'), select translation.
+        if locale.getdefaultlocale()[0][:2] == 'de':
+            wxloc.AddCatalog('uumfc_de')
+
     def show_dialog(self):
         '''Show the text notification dialogue.'''
         text = self.__msgtext.GetValue()
@@ -545,14 +590,15 @@ class UumfcGUI(wx.Frame):
             # Text is set, show dialog.
             title = self.__data.get_('msg_title')
             size = self.__data.get_('msg_size')
-            icon = self.__data.get_('icon_close')
+            icon = os.path.join(self.__dir,
+                               self.__data.get_('icon_close'))
             font = self.__data.get_('msg_font')
-            dlg = UumfcMsg(parent=self,
-                                  title=title,
-                                  size=size,
-                                  icon=icon,
-                                  text=text,
-                                  font=font)
+            dlg = Msg(parent=self,
+                      title=title,
+                      size=size,
+                      icon=icon,
+                      text=text,
+                      font=font)
             dlg.ShowModal()
             # Set dialog size
             size = dlg.GetSize()
@@ -562,17 +608,6 @@ class UumfcGUI(wx.Frame):
 
 
 if __name__ == '__main__':
-    # wxpython app
     app = wx.App()
-    # internationalization of Uumfc
-    wxloc = wx.Locale()
-    wxloc.AddCatalogLookupPathPrefix('./in18')
-    # get system language ('xx_XX', 'CHARSET')
-    wxlang = locale.getdefaultlocale()
-    wxlang = wxlang[0][:2]
-    # get system language ('xx_XX', 'CHARSET') and select translation
-    if locale.getdefaultlocale()[0][:2] == 'de':
-        wxloc.AddCatalog('uumfc_de')
-    # wx.frame, main loop
-    frame = UumfcGUI()
+    frame = GUI()
     app.MainLoop()

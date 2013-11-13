@@ -13,17 +13,18 @@ OPERATING SYSTEM
 
 
 DOWNLOAD FROM GITHUB
-- Download the repository with the <Download ZIP> button.
+- Go to the directory <dist>
+- Get the sourcecode distribution TAR.GZ you like.
+  Klick on RAW view, the download will start.
 
 
 INSTALLATION FROM SOURCECODE DISTRIBUTION
-- Unzip the ZIP file into the desired program directory,
-  for example  <~/Downloads/uumfc-master>.
-- Change into this directory.
-- Build 1st a sourcecode distribution, command line for the terminal:
-  python setup.py sdist
-  rm 'Unity Ubuntu MindfulClock-1'
-- Install the sourcecode distribution, command line for the terminal:
+- Unzip the donloaded file. There will be created follewed directorys:
+  <./Unity Ubuntu MindfulClock-1>,
+  <./Unity Ubuntu MindfulClock-1/alpha>
+- Change into the <alpha> directory.
+- Follow termical commando (with administrator rights):
+  sudo ./setup.py install
   
 - 
 - Requirements: Python 2.7, wxPython 2.8, PyGame 1.9.
@@ -48,8 +49,55 @@ TRUBBLESHOTTING
 
 
 MANUAL REMOVAL
-- Delete the program directory,
-  for example  <~/uumfc>.
+- On a UBUNTU system PYTHON will install follow directorys and files:
+    /usr/local/lib/python2.7/dist-packages
+        uumfcunitest.py
+        uumfcmsg.py
+        uumfcdata.py
+        uumfcgui.py
+        uumfcunitest.pyc
+        uumfcmsg.pyc
+        uumfcdata.pyc
+        uumfcgui.pyc
+    /usr/local/
+        license.txt
+        gpl-3-0_de.html
+        gpl-3-0_en.html
+    /usr/local/icons
+        Icon.253760.png
+    /usr/local/icons/16
+        go-down.png
+        list-add.png -> /usr/local/icons/16
+        list-remove.png -> /usr/local/icons/16
+        media-playback-start.png -> /usr/local/icons/16
+        media-playback-stop.png -> /usr/local/icons/16
+        process-stop.png -> /usr/local/icons/16
+        system-log-out.png -> /usr/local/icons/16
+        system-search.png -> /usr/local/icons/16
+        weather-clear.png -> /usr/local/icons/16
+    /usr/local/icons/22
+        go-down.png
+        list-add.png
+        list-remove.png
+        media-playback-start.png
+        media-playback-stop.png
+        process-stop.png
+        system-log-out.png
+        system-search.png
+        weather-clear.png
+    /usr/local/icons/32
+        go-down.png
+        list-add.png
+        list-remove.png
+        media-playback-start.png
+        media-playback-stop.png
+        process-stop.png
+        system-log-out.png
+        system-search.png
+        weather-clear.png
+  - /usr/local/sounds
+        Metal_Gong-Dianakc-109711828.wav
+
 - If the settings are to be removed: Delete the hidden file <.uumfc> in
   the home directory.
 

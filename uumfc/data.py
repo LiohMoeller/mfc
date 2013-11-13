@@ -30,8 +30,8 @@
 import os
 
 
-class UumfcData():
-    '''UumfcData()
+class Data():
+    '''uumfc.Data()
        Data object of the Ubuntu Unity MindFulClock.
 
     get_(key)
@@ -76,13 +76,11 @@ class UumfcData():
     def set_default(self):
         '''Set the default dictionairy.'''
         # Frame Title, icon name, frame size.
-        t = 'Ubuntu Unity MindFulClock'
-        self.__dic['frame_title'] = t
-        self.__dic['icon_name'] = '../icons/Icon.253760.png'
+        self.__dic['frame_title'] = 'Ubuntu Unity MindFulClock'
+        self.__dic['icon_name'] = 'icons/Icon.253760.png'
         self.__dic['frame_size'] = (400, 360)
         # Message dialog, title, size, font weight, font size.
-        t = 'Ubuntu Unity MindFulClock'
-        self.__dic['msg_title'] = t
+        self.__dic['msg_title'] = 'Ubuntu Unity MindFulClock'
         self.__dic['msg_size'] = (300, 300)
         # Message dialog font = (size, family, style, weight).
         # Size = in points.
@@ -100,25 +98,21 @@ class UumfcData():
         # GUI borderstyle, 'simple', 'raised', 'sunken', 'no'
         self.__dic['gui_borderstyle'] = 'simple'
         # Icons for time interval buttons.
-        self.__dic['icon_increase'] = '../icons/16/list-add.png'
-        self.__dic['icon_decrease'] = '../icons/16/list-remove.png'
+        self.__dic['icon_increase'] = 'icons/16/list-add.png'
+        self.__dic['icon_decrease'] = 'icons/16/list-remove.png'
         # Icons for sound buttons.
-        self.__dic['icon_change'] = '../icons/16/system-search.png'
-        t = '../icons/16/media-playback-start.png'
-        self.__dic['icon_preview'] = t
+        self.__dic['icon_change'] = 'icons/16/system-search.png'
+        self.__dic['icon_preview'] = 'icons/16/media-playback-start.png'
         # Icons for start, stop, minimize, exit.
-        t = '../icons/32/media-playback-start.png'
-        self.__dic['icon_start'] = t
-        t = '../icons/32/media-playback-stop.png'
-        self.__dic['icon_stop'] = t
-        self.__dic['icon_minimize'] = '../icons/32/go-down.png'
-        self.__dic['icon_exit'] = '../icons/32/system-log-out.png'
+        self.__dic['icon_start'] = 'icons/32/media-playback-start.png'
+        self.__dic['icon_stop'] = 'icons/32/media-playback-stop.png'
+        self.__dic['icon_minimize'] = 'icons/32/go-down.png'
+        self.__dic['icon_exit'] = 'icons/32/system-log-out.png'
         # Icon for button in message dialog.
-        self.__dic['icon_close'] = '../icons/32/weather-clear.png'
+        self.__dic['icon_close'] = 'icons/32/weather-clear.png'
         # Text & sound notication.
-        t = 'Please enter your message ..'
-        self.__dic['text_notification'] = t
-        t = '../sounds/Metal_Gong-Dianakc-109711828.wav'
+        self.__dic['text_notification'] = 'Please enter your message ..'
+        t = 'sounds/Metal_Gong-Dianakc-109711828.wav'
         self.__dic['sound_notification'] = t
         # Value for the gauge, to show the progress.
         self.__dic['gauge'] = 100
@@ -156,12 +150,14 @@ class UumfcData():
                              'icon_minimize',
                              'icon_exit',
                              'icon_close'):
+                    newval = str(newval)
                     if os.path.exists(newval):
                         # The new file exists, set the value.
                         self.__dic[key] = newval
                 elif key == 'sound_notification':
                     if newval:
                         # Soundfile is set.
+                        newval=str(newval)
                         if os.path.exists(newval):
                             # The file exists, set the value.
                             self.__dic[key] = newval
