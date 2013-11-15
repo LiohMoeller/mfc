@@ -61,30 +61,30 @@ setup(name='NAME_SOURCE_DISTRIBUTION',
 '''
 
 DESCRIPTION = '''
-With the Unity Ubuntu MindfulClock you turn your device into a Bell
+With the Unity Ubuntu MindFulClock you turn your device into a Bell
 of Mindfulness.
 '''
 LONG_DESCRIPTION = '''
-With the Ubuntu Unity MindfulClock you turn your device into a Bell of
+With the Ubuntu Unity MindFulClock you turn your device into a Bell of
 Mindfulness. During the day you hear regularly the bell and it gives
 you the  opportunity to pause for a moment and enjoy the present of
 Mindfulness.
 '''
 
 
-setup(name='uumfc_src_dist',
-      version='1 / alpha',
+setup(name='uumfc1',
+      version='alpha',
       description=DESCRIPTION,
       long_description=LONG_DESCRIPTION,
       author='Andreas Ulrich',
       author_email='ulrich3110@gmail.com',
       url='https://github.com/ulrich3110/uumfc.git',
-      packages=['uumfc'],
-      package_data={'uumfc': ['doku/*.html',
-                              'icons/*.png',
-                              'icons/16/*.png',
-                              'icons/22/*.png',
-                              'icons/32/*.png',
-                              'sounds/*.wav']},
-      scripts=['uumfcrun'],
+      packages=['uumfc1'],
+      package_data={'uumfc1': ['doku/*.html',
+                               'icons/*.png',
+                               'icons/16/*.png',
+                               'icons/22/*.png',
+                               'icons/32/*.png',
+                               'sounds/*.mp3']},
+      scripts=['uumfc1run'],
       license='GPL3')

@@ -28,10 +28,10 @@
 
 
 import wx
-import uumfc
+import uumfc1
 
 
 if __name__ == '__main__':
     app = wx.App()
-    frame = uumfc.GUI()
+    frame = uumfc1.GUI()
     app.MainLoop()
