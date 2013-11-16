@@ -6,6 +6,7 @@ uumfc1/__init__.py
 uumfc1/data.py
 uumfc1/gui.py
 uumfc1/msg.py
+uumfc1/popup.py
 uumfc1/unitest.py
 uumfc1/doku/gpl-3-0_de.html
 uumfc1/doku/gpl-3-0_en.html
