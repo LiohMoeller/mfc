@@ -73,7 +73,7 @@ Mindfulness.
 
 
 setup(name='uumfc1',
-      version='alpha',
+      version='1.0.1',
       description=DESCRIPTION,
       long_description=LONG_DESCRIPTION,
       author='Andreas Ulrich',

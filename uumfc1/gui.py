@@ -27,7 +27,6 @@
 # If not, see <http://www.gnu.org/licenses/>.
 
 
-import locale
 import os
 import time
 import wx
@@ -593,15 +592,13 @@ class GUI(wx.Frame):
 
     def set_in18(self):
         '''Set the internationalization of Uumfc.'''
-        wxloc = wx.Locale()
-        dir_ = os.path.join(self.__dir, 'in18')
-        wxloc.AddCatalogLookupPathPrefix(dir_)
-        # get system language ('xx_XX', 'CHARSET').
-        wxlang = locale.getdefaultlocale()
-        wxlang = wxlang[0][:2]
-        # get system language ('xx_XX', 'CHARSET'), select translation.
-        if locale.getdefaultlocale()[0][:2] == 'de':
-            wxloc.AddCatalog('uumfc_de')
+        # Get directory
+        dir_ = os.path.join(self.__dir, 'locale')
+        # Locale, set default language.
+        self.__wxloc = wx.Locale(wx.LANGUAGE_DEFAULT)
+        self.__wxloc.AddCatalogLookupPathPrefix(dir_)
+        self.__wxloc.AddCatalog('uumfc1')
+
 
     def show_dialog(self):
         '''Show the text notification dialogue.'''

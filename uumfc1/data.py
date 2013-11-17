@@ -58,7 +58,7 @@ class Data():
         # System dictionairy.
         self.__sys = {}
         # Set system defaults.
-        t = 'Ubuntu Unity MindFulClock One / alpha'
+        t = 'Ubuntu Unity MindFulClock 1.0.1'
         self.__sys['config_file'] = 'uumfc1'
         self.__sys['frame_title'] = t
         self.__sys['gui_borderdist'] = 5
@@ -75,10 +75,9 @@ class Data():
         self.__sys['icon_stop'] = 'icons/32/media-playback-stop.png'
         self.__sys['min_interval'] = 1
         self.__sys['max_interval'] = 300
-        self.__sys['msg_title'] = 'Ubuntu Unity MindFulClock One'
+        self.__sys['msg_title'] = 'Ubuntu Unity MindFulClock'
         # Message type, 'dialog' or 'popup'.
         self.__sys['msg_type'] = 'popup'
-        self.__sys['msg_title'] = 'Ubuntu Unity MindFulClock One'
         # Popup colors, tuple with 2 colours, (text, background).
         # Colors in html format: '#RRGGBB', None for standard colour.
         self.__sys['popup_colors'] = (None, None)
