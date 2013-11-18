@@ -85,6 +85,8 @@ setup(name='uumfc1',
                                'icons/16/*.png',
                                'icons/22/*.png',
                                'icons/32/*.png',
+                               'locale/de/LC_MESSAGES/*.mo',
+                               'pofiles/de/LC_MESSAGES/*.po',
                                'sounds/*.mp3']},
       scripts=['uumfc1run'],
       license='GPL3')

@@ -1,15 +1,16 @@
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
-Name=MindFulClock
-GenericName=Ubuntu Unity MindFulClock
+Name=Ubuntu Unity MindFulClock
+GenericName=
 Comment=Turn your device into a Bell of Mindfulness.
+Categories=Utility;Spirituality;Clock
 Exec=uumfc1run
-Icon=../pixmaps/uumfc1.png
+Icon=uumfc1.png
 Terminal=false
 Type=Application
 StartupNotify=false
-Name[de]=MindFulClock
-GenericName[de]=Ubuntu Unity MindFulClock
+Name[de]=Ubuntu Unity MindFulClock
+GenericName[de]=
 Comment[de]=Verwandeln Sie Ihr Gerät in eine Glocke der Achtsamkeit.
 

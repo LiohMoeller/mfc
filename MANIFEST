@@ -39,4 +39,6 @@ uumfc1/icons/32/process-stop.png
 uumfc1/icons/32/system-log-out.png
 uumfc1/icons/32/system-search.png
 uumfc1/icons/32/weather-clear.png
+uumfc1/locale/de/LC_MESSAGES/uumfc1.mo
+uumfc1/pofiles/de/LC_MESSAGES/uumfc1.po
 uumfc1/sounds/pv-bell.mp3
