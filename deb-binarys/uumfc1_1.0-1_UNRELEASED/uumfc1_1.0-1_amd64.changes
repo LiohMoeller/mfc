@@ -1,0 +1,46 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 19 Nov 2013 21:56:17 +0100
+Source: uumfc1
+Binary: uumfc1
+Architecture: source all
+Version: 1.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Andreas Ulrich <ulrich3110@gmail.com>
+Changed-By: Andreas Ulrich <ulrich3110@gmail.com>
+Description: 
+ uumfc1     - MindFulClock, turn your device into a Bell of Mindfulness.
+Changes: 
+ uumfc1 (1.0-1) UNRELEASED; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1: 
+ 32471498a6a2b3b18d0b96483d47b9c5634ff30c 1311 uumfc1_1.0-1.dsc
+ 0dd98894ee649c63255f1cbc434ea68165d400b9 339716 uumfc1_1.0.orig.tar.gz
+ 0117456081b8782f07a908ec6a1e8c01dea4f396 1466 uumfc1_1.0-1.diff.gz
+ b886870e688f249974fca6c26e93d1a3b2fd9493 337300 uumfc1_1.0-1_all.deb
+Checksums-Sha256: 
+ 4c5adbaeee2b501cff1bb989369a7cdfe5d9d40b6804a889581b2a93996b5396 1311 uumfc1_1.0-1.dsc
+ f176205c65f7740dcae56d94bc9921eed5b84807585a840035632fe6610fd085 339716 uumfc1_1.0.orig.tar.gz
+ dbfcc25ab97c8a91a3474af6800b3f676e7a325663d6e2eafbcbbb6847687aac 1466 uumfc1_1.0-1.diff.gz
+ d4778d5bd477bf14bf17c5c5ed2f427f8ccfd3ffe16a26b82c1f984ef550bde9 337300 uumfc1_1.0-1_all.deb
+Files: 
+ d1aeb7ad61d3663ee7e8339668f9d9a4 1311 misc option uumfc1_1.0-1.dsc
+ 1d76858add2ed3cb517858835162ae44 339716 misc option uumfc1_1.0.orig.tar.gz
+ 48c419ea42a5c263f954c236e58a3321 1466 misc option uumfc1_1.0-1.diff.gz
+ ef4915532ccfdafc02240a1f3ad2c12c 337300 misc option uumfc1_1.0-1_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSi9FcAAoJEEcIVR9bGKk/qsAH/0PNtf8yQ5WN3S0P4WG3a9pv
+GN0tndkNojqnpT0zJuHXsHFwY1N2sshSeWn9ECjbAiUa6OtdfxcNlFc/1OOZJzBk
+B857IQFdHFIjtA7O8Y6eqOdq0q3tTlMi4WEYRe80tEK727qn/PIdglsHYfsAbnCH
+Gok5HUKhAr883bxOgxE41iEusm/wRz8WT0hVCEi4qwrQMFbvEZUMimSdA31qnhzn
+/V6LAi7AlmnbDMC583qIQBvfgnVxlodg0UM07bNQCLuowSsV7MtwaZ8Gg+ptzl/Y
+oju5J+E89LPd5JlnTUwpIXQFXqVmHiAvk2WgJAp1QSdKj/JxtD98cDWHEo99iWY=
+=Qx65
+-----END PGP SIGNATURE-----

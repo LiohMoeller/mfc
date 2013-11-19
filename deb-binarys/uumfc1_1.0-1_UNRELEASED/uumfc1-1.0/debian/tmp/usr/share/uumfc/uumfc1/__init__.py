@@ -27,14 +27,4 @@
 # If not, see <http://www.gnu.org/licenses/>.
 
 
-import wx
-import uumfc1
-
-
-'''The command for the sourcecode distribution.'''
-
-
-if __name__ == '__main__':
-    app = wx.App()
-    frame = uumfc1.GUI()
-    app.MainLoop()
+from gui import GUI

@@ -27,14 +27,19 @@
 # If not, see <http://www.gnu.org/licenses/>.
 
 
+import sys
 import wx
-import uumfc1
 
 
-'''The command for the sourcecode distribution.'''
+'''The start command for the debian package.'''
 
 
 if __name__ == '__main__':
+    # Append uumfc1 to path
+    sys.path.append('/usr/share/uumfc')
+    # Import uumfc1
+    import uumfc1
+    # Run wx
     app = wx.App()
     frame = uumfc1.GUI()
     app.MainLoop()

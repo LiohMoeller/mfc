@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uumfc1\n"
+"POT-Creation-Date: 2013-11-17 13:54+CET\n"
+"PO-Revision-Date: 2013-11-17 14:04+0100\n"
+"Last-Translator: Andreas Ulrich <ulrich3110@gmail.com>\n"
+"Language-Team: erasand <ulrich3110@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: SWITZERLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ./gui.py:263
+msgid "Clock control."
+msgstr "Uhr Kontrolle."
+
+#: ./gui.py:270
+msgid "Start Clock"
+msgstr "Starte Uhr"
+
+#: ./gui.py:276
+msgid "Stop Clock"
+msgstr "Stop Uhr"
+
+#: ./gui.py:282
+msgid "Minimize Clock"
+msgstr "Minimiere Uhr"
+
+#: ./gui.py:288
+msgid "Exit Clock"
+msgstr "Beende Uhr"
+
+#: ./gui.py:327
+msgid "Time interval in minutes."
+msgstr "Zeit Intervall in Minuten."
+
+#: ./gui.py:337
+msgid "Increase time"
+msgstr "Erhöhe Zeit"
+
+#: ./gui.py:343
+msgid "Decrease time"
+msgstr "Verringere Zeit"
+
+#: ./gui.py:371
+msgid "Sound notification."
+msgstr "Musik Benachrichtigung."
+
+#: ./gui.py:378
+msgid "Change sound file"
+msgstr "Wähle Audio Datei"
+
+#: ./gui.py:384
+msgid "Preview sound"
+msgstr "Musik Vorschau"
+
+#: ./gui.py:415
+msgid "Text notification."
+msgstr "Text Benachrichtigung."
+
+#: ./gui.py:438
+msgid "file"
+msgstr "Datei"
+
+#: ./gui.py:443
+msgid "Select the sound file."
+msgstr "Wähle die Audio Datei."
+
