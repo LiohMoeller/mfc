@@ -1,0 +1,14 @@
+Package: uumfc1
+Version: 1.0-1
+Architecture: all
+Maintainer: Andreas Ulrich <ulrich3110@gmail.com>
+Installed-Size: 894
+Depends: python-wxgtk2.8, python-pygame, timidity
+Section: misc
+Priority: option
+Homepage: <https://github.com/ulrich3110/uumfc.git>
+Description: MindFulClock, turn your device into a Bell of Mindfulness.
+ With the Ubuntu Unity MindFulClock you turn your device into a Bell of
+ Mindfulness. During the day you hear regularly the bell and it gives
+ you the  opportunity to pause for a moment and enjoy the present of
+ Mindfulness.

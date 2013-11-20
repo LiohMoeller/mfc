@@ -1,0 +1,24 @@
+Format: http://dep.debian.net/deps/dep5
+Upstream-Name: uumfc1
+Source: <url://example.com>
+
+Files: debian/*
+Copyright: 2013 Marcus Möller <marcus.moeller@outlook.com>
+License: GPL-3+
+ This file is part of the "Unity Ubuntu MindfulClock".
+ "Unity Ubuntu MindfulClock" is free software: you can redistribute it
+ and/or modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ "Unity Ubuntu MindfulClock" is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+ See the GNU General Public License for more details. You should
+ have received a copy of the GNU General Public License along with
+ "Unity Ubuntu MindfulClock".
+ If not, see <http://www.gnu.org/licenses/>
+ 
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in  "/usr/share/common-licenses/GPL-3".
