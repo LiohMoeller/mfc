@@ -1,63 +1,63 @@
-Ubuntu Unity MindFulClock 1.0.1
+MindFulClock 1.0
 
-With the Ubuntu Unity MindFulClock you turn your device into a Bell of
-Mindfulness. During the day you hear regularly the bell and it gives
-you the  opportunity to pause for a moment and enjoy the present of
-Mindfulness.
+With the MindFulClock you turn your device into a Bell of Mindfulness.
+During the day you hear regularly the bell and it gives you the
+opportunity to pause for a moment and enjoy the present of Mindfulness.
 
 
 OPERATING SYSTEM
-- Uumfc is programmed in Python wiht the GUI- toolkit wxPython. It runs
-  on all platforms which support python and wxpython.
-- Uumfc is specially designed for Ubuntu with the Unity desktop.
+- The MindFulClock ist programmed in Python wiht the GUI- toolkit
+  wxPython. It runs on all platforms which support python and wxpython.
+- Its specially designed for Ubuntu with the Unity desktop.
 
 
 DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
-- Go to the directory <dist>
-- Get the sourcecode distribution, TAR.GZ.
-  Klick on RAW view, the download will start.
+- Download
+  <https://github.com/ulrich3110/mfc/blob/master/dist/mfc1-1-0.tar.gz?raw=true>
 
 
-INSTALLATION FROM THE SOURCECODE DISTRIBUTION
+INSTALLATION THE SOURCECODE DISTRIBUTION
 - Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed,
   command line to install:
   <sudo apt-get install python python-wxgtk2.8 python-pygame timidity>
 - Extract the donloaded file.
-- Go to the directory <uumfc1>, where the file <setup.py> is placed.
+- Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
 - Run the command line: <sudo ./setup.py install>
-- the program starts with <uumfc1run>
+- the program starts with <mfc1dist>
+- A freedesktop.org starter is placed in the directory /applications
+  and the icon is placed in the directory /pixmaps of the repisotory.
 
 
 DOWNLAD AND INSTALL DEBIAN PACKAGE
 - Go to the directory <deb>
 - Get the .deb package.
   Klick on RAW view, the download will start.
-- Run the .deb, the package <uumfc1> will be installed.
+- Run the .deb, the package <mfc1> will be installed.
 
 
 TRUBBLESHOTTING
-- Reset all setting: Delete the configuarion, the hidden file <.uumfc1>
+- Reset all setting: Delete the configuarion, the hidden file <.mfc1>
   in the home directory.
 
 
 REMOVE THE SOURCECODE DISTRIBUTION
 - On a UBUNTU system delete follow directory and files
   with adminstrator rights:
-    </usr/local/lib/python2.7/dist-packages>
-    </usr/local/bin/uumfc1run>
+  directory </usr/local/lib/python2.7/dist-packages/mfc1>
+  file </usr/local/lib/python2.7/dist-packages/mfc1-1.0.egg-info>
+  file </usr/local/bin/mfc1dist>
     
 
 REMOVE THE DEBIAN PACKAGE
-- Remove the package <uumfc1> from your system.
+- Remove the package <mfc1> from your system.
     
 
 REMOVE THE SETTINGS
-- If the settings are to be removed: Delete the hidden file <.uumfc1>
+- If the settings are to be removed: Delete the hidden file <.mfc1>
   in the home directory.
 
 
-RELEASE NOTES 1.0.1
-- Cross over Version of MindFulClock.
+RELEASE NOTES 1.0
 - Notification with text or sound.
 - Specification by user: Time interval in minutes, text notification,
   sound notification.
@@ -68,30 +68,30 @@ RELEASE NOTES 1.0.1
 
 
 GERMAN TRANSLATIONS
-- PO files uumfc1/pofiles/de/LC_MESSAGES/uumfc1.po
-- MO files locale/de/LC_MESSAGES/uumfc1.mo
+- PO files mfc1/pofiles/de/LC_MESSAGES/mfc1.po
+- MO files mfc1/locale/de/LC_MESSAGES/mfc1.mo
 - The work directory for follwing command is:
-  </uumfc1>
+  </mfc1>
 - Make a copy from the old file:
-  <cp ./pofiles/de/LC_MESSAGES/uumfc1.po \
-   ./pofiles/de/LC_MESSAGES/old-uumfc1.po>
+  <cp ./pofiles/de/LC_MESSAGES/mfc1.po \
+   ./pofiles/de/LC_MESSAGES/old-mfc1.po>
 - Create a new .po file with pygettext:
-  <pygettext -o ./pofiles/de/LC_MESSAGES/uumfc1.po ./*.py>
+  <pygettext -o ./pofiles/de/LC_MESSAGES/mfc1.po ./*.py>
 - Merge the old into the new .po file:
-  <msgmerge -o ./pofiles/de/LC_MESSAGES/uumfc1.po \
-   ./pofiles/de/LC_MESSAGES/old-uumfc1.po \
-   ./pofiles/de/LC_MESSAGES/uumfc1.po>
+  <msgmerge -o ./pofiles/de/LC_MESSAGES/mfc1.po \
+   ./pofiles/de/LC_MESSAGES/old-mfc1.po \
+   ./pofiles/de/LC_MESSAGES/mfc1.po>
 - Make the translation, edit the .po file:
   - Replace <line Content-Type: text/plain; charset=CHARSET> with 
     <line Content-Type: text/plain; charset=utf-8>.
   - By editing the .PO file with the PO-Edit, you can optionally write
     the .MO file with saving the .po file.
     After this, yo just has to move the .mo file:
-    <mv -u ./pofiles/de/LC_MESSAGES/uumfc1.mo \
-     ./locale/de/LC_MESSAGES/uumfc1.mo>
+    <mv -u ./pofiles/de/LC_MESSAGES/mfc1.mo \
+     ./locale/de/LC_MESSAGES/mfc1.mo>
   - Create the .mo file manually:
-    <msgfmt --output-file ./locale/de/LC_MESSAGES/uumfc1.mo \
-     ./pofiles/de/LC_MESSAGES/uumfc1.po>
+    <msgfmt --output-file ./locale/de/LC_MESSAGES/mfc1.mo \
+     ./pofiles/de/LC_MESSAGES/mfc1.po>
 
 
 CONCEPT, DESIGN
@@ -115,4 +115,4 @@ SOUND WORK
   <pv-bell.mp3> by Marcus Möller
 
 
-17.11.2013 / Andreas Ulrich
+20.11.2013 / Andreas Ulrich
