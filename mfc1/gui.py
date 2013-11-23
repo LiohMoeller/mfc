@@ -32,6 +32,7 @@ import pygame
 from data import Data
 from msg import Msg
 from popup import Popup
+from taskbaricon import TBIcon
 
 
 # name for translations texts
@@ -42,6 +43,12 @@ class GUI(wx.Frame):
     '''mfc1.GUI()
        GUI of the MindFulClock.
 
+    clock_start()
+    Start the clock.
+
+    clock_stop()
+    Stop the clock.
+
     config_load()
     Load the settings with wx.config.
 
@@ -50,6 +57,9 @@ class GUI(wx.Frame):
 
     determine_path()
     Borrowed from wxglade.py, get the package directory.
+
+    get_clock()
+    Get the status of the clock, True of False.
 
     get_integer_interval
     Convert time interval as text to a integer value.
@@ -135,7 +145,8 @@ class GUI(wx.Frame):
                           parent=None,
                           id=wx.ID_ANY,
                           title=title,
-                          size=size)
+                          size=size,
+                          style=wx.FRAME_NO_TASKBAR | wx.RESIZE_BORDER)
         # Icon
         if icon.endswith('.png'):
             self.SetIcon(wx.Icon(name=icon, type=wx.BITMAP_TYPE_PNG))
@@ -170,8 +181,12 @@ class GUI(wx.Frame):
         self.Bind(event=wx.EVT_TIMER,
                   handler=self.on_timer,
                   source=self.__timer)
+        # Clock status
+        self.__clockstatus = False
         # Exit bindings.
         self.Bind(event=wx.EVT_CLOSE, handler=self.on_system_close)
+        # System tray
+        self.init_systray()
         # Layout
         vbox = wx.BoxSizer(wx.VERTICAL)
         vbox.Add(item=intervalbox,
@@ -196,6 +211,37 @@ class GUI(wx.Frame):
         # Centre window, show window.
         self.Center()
         self.Show()
+
+    def clock_start(self):
+        '''Start the clock.'''
+        # Read interval
+        interval = self.get_integer_interval()
+        if interval != 'dev':
+            # Time interval in seconds
+            self.__seconds = interval * 60.0
+            # Start and end time, UTC in seconds
+            self.__start = int(time.time())
+            self.__end = self.__start + self.__seconds
+        else:
+            self.__seconds = 5.0
+            self.__start = int(time.time())
+            self.__end = self.__start + self.__seconds
+        #  start timer
+        self.__timer.Start(self.__data.get_sys('wxtimer'))
+        # Hide start icon, show stop icon
+        self.__btnstart.Enable(False)
+        self.__btnstop.Enable(True)
+        self.__clockstatus = True
+
+    def clock_stop(self):
+        '''Stop the clock.'''
+        # stop timer
+        self.__timer.Stop()
+        # Show start icon, hide stop icon
+        self.__btnstart.Enable(True)
+        self.__btnstop.Enable(False)
+        self.__gauge.SetValue(0)
+        self.__clockstatus = False
 
     def config_load(self):
         '''Load the settings with wx.config.'''
@@ -237,6 +283,10 @@ class GUI(wx.Frame):
         except:
             print 'I am sorry, but something is wrong.  There is no '
             print '__file__ variable. Please contact the author.'
+
+    def get_clock(self):
+        '''Get the status of the clock, True of False.'''
+        return(self.__clockstatus)
 
     def get_integer_interval(self):
         '''Convert time interval as text to a integer value.'''
@@ -404,6 +454,19 @@ class GUI(wx.Frame):
         vsiz.Add(item=hsiz, proportion=1, flag=wx.EXPAND)
         return(vsiz)
 
+    def init_systray(self):
+        '''Create the system tray icon.'''
+        # TaskbarIcon
+        icon = os.path.join(self.__dir,
+                            self.__data.get_sys('systray_icon'))
+        title = self.__data.get_sys('frame_title')
+        self.__tbicon = TBIcon(frame=self,
+                               icon=icon,
+                               title=title)
+        wx.EVT_TASKBAR_LEFT_UP(self.__tbicon, self.on_tbleft)
+        self.Bind(event=wx.EVT_CLOSE,
+                  handler=self.on_system_close)
+
     def init_text(self):
         '''Create the text notification widgets.'''
         # Title
@@ -482,7 +545,8 @@ class GUI(wx.Frame):
 
     def on_minimize(self, event):
         '''Event for button, minimize frame.'''
-        self.Iconize()
+        if self.IsShown():
+            self.Hide()
 
     def on_msgsound(self, event):
         '''Event for text control, check path to sound file.'''
@@ -504,38 +568,27 @@ class GUI(wx.Frame):
 
     def on_start(self, event):
         '''Event for button, start the clock.'''
-        # Read interval
-        interval = self.get_integer_interval()
-        if interval != 'dev':
-            # Time interval in seconds
-            self.__seconds = interval * 60.0
-            # Start and end time, UTC in seconds
-            self.__start = int(time.time())
-            self.__end = self.__start + self.__seconds
-        else:
-            self.__seconds = 5.0
-            self.__start = int(time.time())
-            self.__end = self.__start + self.__seconds
-        #  start timer
-        self.__timer.Start(self.__data.get_sys('wxtimer'))
-        # Hide start icon, show stop icon
-        self.__btnstart.Enable(False)
-        self.__btnstop.Enable(True)
+        self.clock_start()
 
     def on_stop(self, event):
         '''Event for button, stop the clock.'''
-        # stop timer
-        self.__timer.Stop()
-        # Show start icon, hide stop icon
-        self.__btnstart.Enable(True)
-        self.__btnstop.Enable(False)
-        self.__gauge.SetValue(0)
+        self.clock_stop()
 
     def on_system_close(self, event):
         '''Event before close the frame.'''
         # Save the settings
+        self.__tbicon.Destroy()
         self.config_save()
-        event.Skip()
+        self.Destroy()
+        #~ event.Skip()
+
+    def on_tbleft(self, event):
+        '''Event, left click on the systray.'''
+        #~ self.PopupMenu(self.__tbicon.CreatePopupMenu())
+        if self.IsShown():
+            self.Hide()
+        else:
+            self.Show()
 
     def on_timer(self, event):
         '''Event for timer, the MindFulClock.'''

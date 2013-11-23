@@ -56,30 +56,24 @@ class Data():
         # System dictionairy.
         self.__sys = {}
         # Set system defaults.
-        t = 'MindFulClock 1.0'
         self.__sys['config_file'] = 'mfc'
-        self.__sys['frame_title'] = t
+        self.__sys['frame_title'] = 'MindFulClock 1.0'
+        self.__sys['gauge'] = 100
         self.__sys['gui_borderdist'] = 5
-        self.__sys['icon_name'] = 'icons/mindfulclock.png'
+        # GUI borderstyle, 'simple', 'raised', 'sunken', 'no'
+        self.__sys['gui_borderstyle'] = 'simple'
         self.__sys['icon_change'] = 'icons/16/system-search.png'
+        self.__sys['icon_close'] = 'icons/32/weather-clear.png'
         self.__sys['icon_decrease'] = 'icons/16/list-remove.png'
         self.__sys['icon_exit'] = 'icons/32/system-log-out.png'
-        self.__sys['icon_close'] = 'icons/32/weather-clear.png'
-        self.__sys['gauge'] = 100
         self.__sys['icon_increase'] = 'icons/16/list-add.png'
         self.__sys['icon_minimize'] = 'icons/32/go-down.png'
+        self.__sys['icon_name'] = 'icons/mindfulclock.png'
         self.__sys['icon_preview'] = 'icons/16/media-playback-start.png'
         self.__sys['icon_start'] = 'icons/32/media-playback-start.png'
         self.__sys['icon_stop'] = 'icons/32/media-playback-stop.png'
-        self.__sys['min_interval'] = 1
         self.__sys['max_interval'] = 300
-        self.__sys['msg_title'] = 'MindFulClock'
-        # Message type, 'dialog' or 'popup'.
-        self.__sys['msg_type'] = 'popup'
-        # Popup colors, tuple with 2 colours, (text, background).
-        # Colors in html format: '#RRGGBB', None for standard colour.
-        self.__sys['popup_colors'] = (None, None)
-        self.__sys['wxtimer'] = 100
+        self.__sys['min_interval'] = 1
         # Message dialog font = (size, family, style, weight).
         # Size = in points.
         # Family = 'decorative', 'default', 'modern', 'roman',
@@ -87,8 +81,14 @@ class Data():
         # Style = 'normal', 'slant', 'italic'.
         # Weight = 'normal', 'light', 'bold'.
         self.__sys['msg_font'] = (20, 'default', 'italic', 'bold')
-        # GUI borderstyle, 'simple', 'raised', 'sunken', 'no'
-        self.__sys['gui_borderstyle'] = 'simple'
+        self.__sys['msg_title'] = 'MindFulClock'
+        # Message type, 'dialog' or 'popup'.
+        self.__sys['msg_type'] = 'popup'
+        # Popup colors, tuple with 2 colours, (text, background).
+        # Colors in html format: '#RRGGBB', None for standard colour.
+        self.__sys['popup_colors'] = (None, None)
+        self.__sys['systray_icon'] = 'icons/mindfulclock_22.png'
+        self.__sys['wxtimer'] = 100
         # Set default user datas.
         self.set_user_default()
 

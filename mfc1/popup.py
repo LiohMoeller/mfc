@@ -122,7 +122,12 @@ class Popup(wx.PopupTransientWindow):
 
 
 class wxTestFrame(wx.Frame):
-    '''Test wx.Frame.'''
+    '''Test wx.Frame.
+
+    show_popup()
+    Show dialogue.
+
+    '''
 
     def __init__(self):
         wx.Frame.__init__(self, parent=None)
