@@ -72,6 +72,8 @@ class Data():
         self.__sys['icon_preview'] = 'icons/16/media-playback-start.png'
         self.__sys['icon_start'] = 'icons/32/media-playback-start.png'
         self.__sys['icon_stop'] = 'icons/32/media-playback-stop.png'
+        self.__sys['indicator_icon'] = 'alarm-clock-indicator'
+        self.__sys['indicator_path'] = 'icons'
         self.__sys['max_interval'] = 300
         self.__sys['min_interval'] = 1
         # Message dialog font = (size, family, style, weight).

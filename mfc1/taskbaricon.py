@@ -37,6 +37,7 @@ class TBIcon(wx.TaskBarIcon):
        Taskbar applet for the MindFulClock.
        frame = wx.Frame
        icon = path to the icon, shown in the systray.
+       title = tooltip of the systray icon.
 
     '''
 
@@ -156,7 +157,7 @@ class wxTestFrame(wx.Frame):
     def on_system_close(self, event):
         '''Simulate close the clock.'''
         self.__tbicon.Destroy()
-        event.Skip()
+        self.Destroy()
 
     def on_tbleft(self, event):
         '''Event, left click on the systray.'''

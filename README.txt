@@ -17,15 +17,20 @@ DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
 
 
 INSTALLATION THE SOURCECODE DISTRIBUTION
-- Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed,
-  command line to install:
-  <sudo apt-get install python python-wxgtk2.8 python-pygame timidity>
+- Make sure that Python 2.7, wxPython 2.8, PyGame 1.9, the technical
+  packages timidity & python-appindicator are installed.
+  Command line to install:
+  <sudo apt-get install python python-wxgtk2.8 python-pygame timidity
+  python-appindicator>
 - Extract the donloaded file.
 - Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
 - Run the command line: <sudo ./setup.py install>
 - the program starts with <mfc1dist>
-- A freedesktop.org starter is placed in the directory /applications
-  and the icon is placed in the directory /pixmaps of the repisotory.
+- A freedesktop.org starter is placed in the directory </applications>
+  and the icon is placed in the directory </pixmaps> of the repisotory.
+- Under Ubuntu you must copy the file </pixmaps/alarm-clock-indicator
+  .png> from the repository to </usr/share/pixmaps>.  Otherwise the
+  application indicator will have no icon.
 
 
 DOWNLAD AND INSTALL DEBIAN PACKAGE
@@ -62,9 +67,11 @@ RELEASE NOTES 1.0
 - Specification by user: Time interval in minutes, text notification,
   sound notification.
 - Art work and sound theme.
-- Sourcecode installation
-- Debian package
+- Sourcecode installation.
+- Debian package.
 - Internationalisation with pygettext.
+- System-tray application
+- Ubuntu Unity integration wiht the Application indicator
 
 
 GERMAN TRANSLATIONS
@@ -115,4 +122,4 @@ SOUND WORK
   <pv-bell.mp3> by Marcus Möller
 
 
-20.11.2013 / Andreas Ulrich
+24.11.2013 / Andreas Ulrich

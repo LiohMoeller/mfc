@@ -33,6 +33,7 @@ from data import Data
 from msg import Msg
 from popup import Popup
 from taskbaricon import TBIcon
+from unity import AppIndicator
 
 
 # name for translations texts
@@ -185,8 +186,6 @@ class GUI(wx.Frame):
         self.__clockstatus = False
         # Exit bindings.
         self.Bind(event=wx.EVT_CLOSE, handler=self.on_system_close)
-        # System tray
-        self.init_systray()
         # Layout
         vbox = wx.BoxSizer(wx.VERTICAL)
         vbox.Add(item=intervalbox,
@@ -208,6 +207,8 @@ class GUI(wx.Frame):
         self.SetSizer(vbox)
         # Disable stop button
         self.__btnstop.Enable(False)
+        # System tray
+        wx.FutureCall(100, self.init_systray)
         # Centre window, show window.
         self.Center()
         self.Show()
@@ -232,6 +233,9 @@ class GUI(wx.Frame):
         self.__btnstart.Enable(False)
         self.__btnstop.Enable(True)
         self.__clockstatus = True
+        # Application indicator.
+        if self.__indstatus:
+            self.__ind.set_menu_stop()
 
     def clock_stop(self):
         '''Stop the clock.'''
@@ -242,6 +246,9 @@ class GUI(wx.Frame):
         self.__btnstop.Enable(False)
         self.__gauge.SetValue(0)
         self.__clockstatus = False
+        # Application indicator.
+        if self.__indstatus:
+            self.__ind.set_menu_start()
 
     def config_load(self):
         '''Load the settings with wx.config.'''
@@ -456,16 +463,36 @@ class GUI(wx.Frame):
 
     def init_systray(self):
         '''Create the system tray icon.'''
-        # TaskbarIcon
-        icon = os.path.join(self.__dir,
-                            self.__data.get_sys('systray_icon'))
-        title = self.__data.get_sys('frame_title')
-        self.__tbicon = TBIcon(frame=self,
-                               icon=icon,
-                               title=title)
-        wx.EVT_TASKBAR_LEFT_UP(self.__tbicon, self.on_tbleft)
-        self.Bind(event=wx.EVT_CLOSE,
-                  handler=self.on_system_close)
+        # 1st Application indicator
+        try:
+            # status of the indicator.
+            self.__indstatus = True
+            # Application indicator.
+            icon = self.__data.get_sys('indicator_icon')
+            path = os.path.join(self.__dir,
+                            self.__data.get_sys('indicator_path'))
+            self.__ind = AppIndicator(frame=self,
+                                      icon=icon,
+                                      path=path,
+                                      textdic={'start': _(u'Start'),
+                                               'stop': _(u'Stop'),
+                                               'show': _(u'Show'),
+                                               'hide': _(u'Hide'),
+                                               'exit': _(u'Exit')})
+            self.__ind.main()
+        except ImportError:
+            # Error: Taskbaricon.
+            self.__indstatus = False
+            # TaskbarIcon
+            icon = os.path.join(self.__dir,
+                                self.__data.get_sys('systray_icon'))
+            title = self.__data.get_sys('frame_title')
+            self.__tbicon = TBIcon(frame=self,
+                                   icon=icon,
+                                   title=title)
+            wx.EVT_TASKBAR_LEFT_UP(self.__tbicon, self.on_tbleft)
+            self.Bind(event=wx.EVT_CLOSE,
+                      handler=self.on_system_close)
 
     def init_text(self):
         '''Create the text notification widgets.'''
@@ -527,6 +554,8 @@ class GUI(wx.Frame):
 
     def on_exit(self, event):
         '''Event for button, exit program.'''
+        if self.__indstatus:
+            self.__ind.quit()
         self.Close()
 
     def on_increase(self, event):
@@ -547,6 +576,9 @@ class GUI(wx.Frame):
         '''Event for button, minimize frame.'''
         if self.IsShown():
             self.Hide()
+            # Application indicator
+            if self.__indstatus:
+                self.__ind.set_menu_show()
 
     def on_msgsound(self, event):
         '''Event for text control, check path to sound file.'''
@@ -577,10 +609,10 @@ class GUI(wx.Frame):
     def on_system_close(self, event):
         '''Event before close the frame.'''
         # Save the settings
-        self.__tbicon.Destroy()
+        if not self.__indstatus:
+            self.__tbicon.Destroy()
         self.config_save()
         self.Destroy()
-        #~ event.Skip()
 
     def on_tbleft(self, event):
         '''Event, left click on the systray.'''

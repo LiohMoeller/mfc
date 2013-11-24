@@ -30,6 +30,7 @@
       |     '--*.py
       '--pixmaps
          '--mfc1.png
+         '--alarm-clock-indicator.png
 
 
 DEBIAN DATEISYSTEM
