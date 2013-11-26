@@ -26,10 +26,8 @@
 
 
 import wx
-from gi.repository import Unity, Gio, GObject, Dbusmenu
 # Install under unity: <sudo apt-get install python-appindicator>
 import appindicator
-import gobject
 import gtk
 
 
@@ -65,6 +63,10 @@ class AppIndicator():
 
     def menu_setup(self):
         self.menu = gtk.Menu()
+        # Remaining time entry.
+        self.remain = gtk.MenuItem('--:--')
+        self.remain.show()
+        self.menu.append(self.remain)
         # Clock entry.
         self.clock = gtk.MenuItem(self.__textdic['start'])
         self.clock.connect('activate', self.on_start_stop)
@@ -128,56 +130,11 @@ class AppIndicator():
         label = self.clock.child
         label.set_text(self.__textdic['stop'])
 
-
-class UnityLauncher():
-    '''Unity Launcher object for the MindFulClock.'''
-
-    def __init__(self):
-        # Nothint to do.
-        pass
-
-    def ubuntu_example(self):
-        '''Example from <https://wiki.ubuntu.com/Unity/LauncherAPI>.'''
-        loop = GObject.MainLoop()
-        # Pretend to be evolution for the sake of the example
-        self.__launcher = Unity.LauncherEntry.get_for_desktop_id('evolution.desktop')
-        self.__launcher = Unity.LauncherEntry.get_for_desktop_id('0123456789')
-        print(self.__launcher)
-        self.__launcher = Unity.LauncherEntry.get_for_desktop_id('0123456789.desktop')
-        print(self.__launcher)
-        self.__launcher = Unity.LauncherEntry.get_for_desktop_id('gnome-screenshot.desktop')
-        self.__launcher = Unity.LauncherEntry.get_for_desktop_id('firefox.desktop')
-        print(self.__launcher)
-
-        # Show a count of 124 on the icon
-        self.__launcher.set_property('count', 124)
-        self.__launcher.set_property('count_visible', False)
-        # Set progress to 42% done
-        self.__launcher.set_property('progress', 0.42)
-        self.__launcher.set_property('progress_visible', True)
-        # We also want a quicklist
-        ql = Dbusmenu.Menuitem.new()
-        item1 = Dbusmenu.Menuitem.new()
-        item1.property_set(Dbusmenu.MENUITEM_PROP_LABEL, 'Item 1')
-        item1.property_set_bool(Dbusmenu.MENUITEM_PROP_VISIBLE, True)
-        item2 = Dbusmenu.Menuitem.new()
-        item2.property_set(Dbusmenu.MENUITEM_PROP_LABEL, 'Item 2')
-        item2.property_set_bool(Dbusmenu.MENUITEM_PROP_VISIBLE, True)
-        ql.child_append(item1)
-        ql.child_append(item2)
-        self.__launcher.set_property('quicklist', ql)
-        GObject.timeout_add_seconds(5, self.update_urgency)
-        loop.run()
-
-    def update_urgency(self):
-        '''Example from <https://wiki.ubuntu.com/Unity/LauncherAPI>.'''
-        if self.__launcher.get_property('urgent'):
-            print('Removing urgent flag')
-            self.__launcher.set_property('urgent', False)
-        else:
-            print('setting urgent flag')
-            self.__launcher.set_property('urgent', True)
-        return True
+    def set_remain_time(self, text):
+        '''Set the remaining time.'''
+        self.ind.set_label(text)
+        label = self.remain.child
+        label.set_text(text)
 
 
 class wxTestFrame(wx.Frame):
@@ -192,9 +149,7 @@ class wxTestFrame(wx.Frame):
     '''
 
     def __init__(self):
-        wx.Frame.__init__(self,
-                          parent=None,
-                          style=wx.FRAME_NO_TASKBAR | wx.RESIZE_BORDER)
+        wx.Frame.__init__(self, parent=None)
         # Button
         btnlaunch = wx.Button(parent=self, label='Launcher')
         btnindic = wx.Button(parent=self, label='Indicator')
@@ -205,7 +160,7 @@ class wxTestFrame(wx.Frame):
         # Clockstatus
         self.__clockstatus = False
         # status of the indicator.
-        self.__indstatus = True
+        self.__indstatus = False
         # Layout
         vbox = wx.BoxSizer(wx.VERTICAL)
         vbox.Add(item=btnlaunch, flag=wx.EXPAND)
@@ -256,8 +211,6 @@ class wxTestFrame(wx.Frame):
 
     def on_launch(self, event):
         '''Test Unity application launcher.'''
-        launch = UnityLauncher()
-        launch.ubuntu_example()
 
     def on_minimize(self, event):
         '''Event, minimize button.'''

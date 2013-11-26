@@ -7,12 +7,17 @@ mfc1/data.py
 mfc1/gui.py
 mfc1/msg.py
 mfc1/popup.py
+mfc1/taskbaricon.py
 mfc1/unitest.py
+mfc1/unity.py
 mfc1/doku/gpl-3-0_de.html
 mfc1/doku/gpl-3-0_en.html
 mfc1/icons/Icon.253760.png
+mfc1/icons/alarm-clock-indicator.png
+mfc1/icons/clock-icon-512x512.png
 mfc1/icons/clock_ubuntu_3.png
 mfc1/icons/mindfulclock.png
+mfc1/icons/mindfulclock_22.png
 mfc1/icons/16/go-down.png
 mfc1/icons/16/list-add.png
 mfc1/icons/16/list-remove.png

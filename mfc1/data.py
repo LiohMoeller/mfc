@@ -90,7 +90,7 @@ class Data():
         # Colors in html format: '#RRGGBB', None for standard colour.
         self.__sys['popup_colors'] = (None, None)
         self.__sys['systray_icon'] = 'icons/mindfulclock_22.png'
-        self.__sys['wxtimer'] = 100
+        self.__sys['wxtimer'] = 500
         # Set default user datas.
         self.set_user_default()
 

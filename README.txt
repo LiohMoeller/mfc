@@ -11,47 +11,23 @@ OPERATING SYSTEM
 - Its specially designed for Ubuntu with the Unity desktop.
 
 
-DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
-- Download
-  <https://github.com/ulrich3110/mfc/blob/master/dist/mfc1-1-0.tar.gz?raw=true>
-
-
-INSTALLATION THE SOURCECODE DISTRIBUTION
-- Make sure that Python 2.7, wxPython 2.8, PyGame 1.9, the technical
-  packages timidity & python-appindicator are installed.
-  Command line to install:
-  <sudo apt-get install python python-wxgtk2.8 python-pygame timidity
-  python-appindicator>
-- Extract the donloaded file.
-- Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
-- Run the command line: <sudo ./setup.py install>
-- the program starts with <mfc1dist>
-- A freedesktop.org starter is placed in the directory </applications>
-  and the icon is placed in the directory </pixmaps> of the repisotory.
-- Under Ubuntu you must copy the file </pixmaps/alarm-clock-indicator
-  .png> from the repository to </usr/share/pixmaps>.  Otherwise the
-  application indicator will have no icon.
-
-
 DOWNLAD AND INSTALL DEBIAN PACKAGE
 - Go to the directory <deb>
 - Get the .deb package.
   Klick on RAW view, the download will start.
 - Run the .deb, the package <mfc1> will be installed.
+- You can start the clock with the menu entry, or with the command:
+  <mfc1deb [OPTIONS]>
+    --start-minim   Start the clock minimized.
+    --tb-icon       Use instead of the application indicator the
+                    classic system tray.
+    --help          Show a little help.
 
 
 TRUBBLESHOTTING
 - Reset all setting: Delete the configuarion, the hidden file <.mfc1>
   in the home directory.
 
-
-REMOVE THE SOURCECODE DISTRIBUTION
-- On a UBUNTU system delete follow directory and files
-  with adminstrator rights:
-  directory </usr/local/lib/python2.7/dist-packages/mfc1>
-  file </usr/local/lib/python2.7/dist-packages/mfc1-1.0.egg-info>
-  file </usr/local/bin/mfc1dist>
-    
 
 REMOVE THE DEBIAN PACKAGE
 - Remove the package <mfc1> from your system.
@@ -62,6 +38,42 @@ REMOVE THE SETTINGS
   in the home directory.
 
 
+DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
+- Go to the directory <dist>
+- Get the .tar.gz file.
+  Klick on RAW view, the download will start.
+
+
+INSTALLATION THE SOURCECODE DISTRIBUTION
+- Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed.
+  The technical packages timidity & python-appindicator may help.
+  Command line to install:
+  <sudo apt-get install python python-wxgtk2.8 python-pygame>
+  <sudo apt-get install timidity python-appindicator>
+- Extract the donloaded file.
+- Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
+- Run the command line: <sudo ./setup.py install>
+- the program starts with the command:
+  <mfc1dist [OPTIONS]>
+    --start-minim   Start the clock minimized.
+    --tb-icon       Use instead of the application indicator the
+                    classic system tray.
+    --help          Show a little help.
+- For a program starter icons are placed in </pixmaps> in the
+  repisotory.
+- Has the application indicator no icon, you have to copy the file
+  </pixmaps/alarm-clock-indicator.png> from the repository to
+  </usr/share/pixmaps>.
+
+
+REMOVE THE SOURCECODE DISTRIBUTION
+- On a UBUNTU system delete follow directory and files
+  with adminstrator rights:
+  directory </usr/local/lib/python2.7/dist-packages/mfc1>
+  file </usr/local/lib/python2.7/dist-packages/mfc1-1.0.egg-info>
+  file </usr/local/bin/mfc1dist>
+    
+
 RELEASE NOTES 1.0
 - Notification with text or sound.
 - Specification by user: Time interval in minutes, text notification,
@@ -70,8 +82,9 @@ RELEASE NOTES 1.0
 - Sourcecode installation.
 - Debian package.
 - Internationalisation with pygettext.
-- System-tray application
-- Ubuntu Unity integration wiht the Application indicator
+- System-tray application.
+- Ubuntu Unity integration wiht the Application indicator.
+- Command line options
 
 
 GERMAN TRANSLATIONS
@@ -122,4 +135,4 @@ SOUND WORK
   <pv-bell.mp3> by Marcus Möller
 
 
-24.11.2013 / Andreas Ulrich
+26.11.2013 / Andreas Ulrich
