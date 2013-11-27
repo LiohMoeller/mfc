@@ -1,12 +1,11 @@
-MindFulClock 1.0
+MindfulClock 1.0
 
-With the MindFulClock you turn your device into a Bell of Mindfulness.
-During the day you hear regularly the bell and it gives you the
-opportunity to pause for a moment and enjoy the present of Mindfulness.
-
+With the MindfulClock you turn your device into a Bell of Mindfulness.
+During the day, it will periodically invite the bell and gives you the
+opportunity to pause, and enjoy the present moment in mindfulness.
 
 OPERATING SYSTEM
-- The MindFulClock ist programmed in Python wiht the GUI- toolkit
+- The MindfulClock is programmed in Python wiht the GUI toolkit
   wxPython. It runs on all platforms which support python and wxpython.
 - Its specially designed for Ubuntu with the Unity desktop.
 

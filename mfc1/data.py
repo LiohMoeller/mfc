@@ -30,7 +30,7 @@ import os
 
 class Data():
     '''mfc1.Data()
-       Data object of the MindFulClock.
+       Data object of the MindfulClock.
 
     get_sys(key)
     Get system data from the key.
@@ -56,7 +56,7 @@ class Data():
         # System dictionairy.
         self.__sys = {}
         # Set system defaults.
-        t = 'MindFulClock 1.0'
+        t = 'MindfulClock 1.0'
         self.__sys['config_file'] = 'mfc'
         self.__sys['frame_title'] = t
         self.__sys['gui_borderdist'] = 5
@@ -73,7 +73,7 @@ class Data():
         self.__sys['icon_stop'] = 'icons/32/media-playback-stop.png'
         self.__sys['min_interval'] = 1
         self.__sys['max_interval'] = 300
-        self.__sys['msg_title'] = 'MindFulClock'
+        self.__sys['msg_title'] = 'MindfulClock'
         # Message type, 'dialog' or 'popup'.
         self.__sys['msg_type'] = 'popup'
         # Popup colors, tuple with 2 colours, (text, background).

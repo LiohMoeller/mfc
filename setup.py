@@ -59,12 +59,12 @@ setup(name='NAME_SOURCE_DISTRIBUTION',
 '''
 
 DESCRIPTION = '''
-With the MindFulClock you turn your device into a Bell of Mindfulness.
+With the MindfulClock you turn your device into a Bell of Mindfulness.
 '''
 LONG_DESCRIPTION = '''
-With the MindFulClock you turn your device into a Bell of Mindfulness.
-During the day you hear regularly the bell and it gives you the
-opportunity to pause for a moment and enjoy the present of Mindfulness.
+With the MindfulClock you turn your device into a Bell of Mindfulness.
+During the day, it will periodically invite the bell and gives you the
+opportunity to pause, and enjoy the present moment in mindfulness.
 '''
 
 
