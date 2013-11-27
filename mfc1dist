@@ -25,14 +25,45 @@
 # "MindfulClock".  If not, see <http://www.gnu.org/licenses/>.
 
 
+import sys
 import wx
 import mfc1
 
 
-'''The command for the sourcecode distribution.'''
+'''The start command for the sourcecode distribution.
+   mfc1dist [OPTIONS]
+     --start-minim: Start the clock minimized.
+     --tb-icon: Use instead of the application indicator the classic
+                system tray.
+     --help: Show this help.
+
+'''
 
 
 if __name__ == '__main__':
-    app = wx.App()
-    frame = mfc1.GUI()
-    app.MainLoop()
+    # Command line options
+    clio = sys.argv
+    if '--start-minim' in clio:
+        mini = True
+    else:
+        mini = False
+    if '--tb-icon' in clio:
+        tbar = True
+    else:
+        tbar = False
+    if '--help' in clio:
+        print('')
+        print('Source code distribution of the MindfulClock.')
+        print('Commando: mfc1dist [OPTIONS]')
+        print('')
+        print('  --start-minim   Start the clock minimized.')
+        print('')
+        print('  --tb-icon       Use the classic system tray, instead')
+        print('                  of the application indicator.')
+        print('')
+        print('  --help          Show this help.')
+        print('')
+    else:
+        app = wx.App()
+        frame = mfc1.GUI(systray=mini, tbicon=tbar)
+        app.MainLoop()

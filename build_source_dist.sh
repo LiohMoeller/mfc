@@ -8,7 +8,7 @@ find ./ -name *.pyc -delete
 echo "..Build GZTAR source distribution."
 ./setup.py sdist --formats=gztar
 
-# Build source distribution wiht zip file
+# Build source distribution with zip file
 # echo "..Build ZIP source distribution."
 # ./setup.py sdist --formats=zip
 

@@ -10,33 +10,59 @@ OPERATING SYSTEM
 - Its specially designed for Ubuntu with the Unity desktop.
 
 
-DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
-- Download
-  <https://github.com/ulrich3110/mfc/blob/master/dist/mfc1-1-0.tar.gz?raw=true>
-
-
-INSTALLATION THE SOURCECODE DISTRIBUTION
-- Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed,
-  command line to install:
-  <sudo apt-get install python python-wxgtk2.8 python-pygame timidity>
-- Extract the donloaded file.
-- Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
-- Run the command line: <sudo ./setup.py install>
-- the program starts with <mfc1dist>
-- A freedesktop.org starter is placed in the directory /applications
-  and the icon is placed in the directory /pixmaps of the repisotory.
-
-
 DOWNLAD AND INSTALL DEBIAN PACKAGE
 - Go to the directory <deb>
 - Get the .deb package.
   Klick on RAW view, the download will start.
 - Run the .deb, the package <mfc1> will be installed.
+- You can start the clock with the menu entry, or with the command:
+  <mfc1deb [OPTIONS]>
+    --start-minim   Start the clock minimized.
+    --tb-icon       Use the classic system tray, instead
+                    of the application indicator.
+    --help          Show a little help.
 
 
 TRUBBLESHOTTING
 - Reset all setting: Delete the configuarion, the hidden file <.mfc1>
   in the home directory.
+
+
+REMOVE THE DEBIAN PACKAGE
+- Remove the package <mfc1> from your system.
+
+
+REMOVE THE SETTINGS
+- If the settings are to be removed: Delete the hidden file <.mfc1>
+  in the home directory.
+
+
+DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
+- Go to the directory <dist>
+- Get the .tar.gz file.
+  Klick on RAW view, the download will start.
+
+
+INSTALLATION THE SOURCECODE DISTRIBUTION
+- Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed.
+  The technical packages timidity & python-appindicator may help.
+  Command line to install:
+  <sudo apt-get install python python-wxgtk2.8 python-pygame>
+  <sudo apt-get install timidity python-appindicator>
+- Extract the donloaded file.
+- Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
+- Run the command line: <sudo ./setup.py install>
+- the program starts with the command:
+  <mfc1dist [OPTIONS]>
+    --start-minim   Start the clock minimized.
+    --tb-icon       Use the classic system tray, instead
+                    of the application indicator.
+    --help          Show a little help.
+- For a program starter icons are placed in </pixmaps> in the
+  repisotory.
+- If application indicator icon is not displayed, please copy the file
+  </pixmaps/alarm-clock-indicator.png> from the repository to
+  </usr/share/pixmaps>.
 
 
 REMOVE THE SOURCECODE DISTRIBUTION
@@ -45,15 +71,6 @@ REMOVE THE SOURCECODE DISTRIBUTION
   directory </usr/local/lib/python2.7/dist-packages/mfc1>
   file </usr/local/lib/python2.7/dist-packages/mfc1-1.0.egg-info>
   file </usr/local/bin/mfc1dist>
-    
-
-REMOVE THE DEBIAN PACKAGE
-- Remove the package <mfc1> from your system.
-    
-
-REMOVE THE SETTINGS
-- If the settings are to be removed: Delete the hidden file <.mfc1>
-  in the home directory.
 
 
 RELEASE NOTES 1.0
@@ -61,9 +78,12 @@ RELEASE NOTES 1.0
 - Specification by user: Time interval in minutes, text notification,
   sound notification.
 - Art work and sound theme.
-- Sourcecode installation
-- Debian package
+- Sourcecode installation.
+- Debian package.
 - Internationalisation with pygettext.
+- System-tray application.
+- Ubuntu Unity integration wiht the Application indicator.
+- Command line options
 
 
 GERMAN TRANSLATIONS
@@ -81,7 +101,7 @@ GERMAN TRANSLATIONS
    ./pofiles/de/LC_MESSAGES/old-mfc1.po \
    ./pofiles/de/LC_MESSAGES/mfc1.po>
 - Make the translation, edit the .po file:
-  - Replace <line Content-Type: text/plain; charset=CHARSET> with 
+  - Replace <line Content-Type: text/plain; charset=CHARSET> with
     <line Content-Type: text/plain; charset=utf-8>.
   - By editing the .PO file with the PO-Edit, you can optionally write
     the .MO file with saving the .po file.
@@ -114,4 +134,4 @@ SOUND WORK
   <pv-bell.mp3> by Marcus Möller
 
 
-20.11.2013 / Andreas Ulrich
+26.11.2013 / Andreas Ulrich
