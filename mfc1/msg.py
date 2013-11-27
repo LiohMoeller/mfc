@@ -30,7 +30,7 @@ import wx
 
 class Msg(wx.Dialog):
     '''mfc1.Msg(parent, title, size, icon, text)
-       Show the text notification for the MindFulClock.
+       Show the text notification for the MindfulClock.
        parent = wx.window
        title = 'dialog title'
        size = (width, height)
@@ -132,7 +132,7 @@ class wxTestFrame(wx.Frame):
         '''Show dialogue.'''
         t = 'Please enter your message ..'
         dlg = Msg(parent=self,
-                  title='MindFulClock',
+                  title='MindfulClock',
                   size=(300, 300),
                   icon='icons/32/weather-clear.png',
                   text=t,

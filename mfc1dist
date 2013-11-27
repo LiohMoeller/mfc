@@ -53,13 +53,13 @@ if __name__ == '__main__':
         tbar = False
     if '--help' in clio:
         print('')
-        print('Source code distribution of the MindFulClock.')
+        print('Source code distribution of the MindfulClock.')
         print('Commando: mfc1dist [OPTIONS]')
         print('')
         print('  --start-minim   Start the clock minimized.')
         print('')
-        print('  --tb-icon       Use instead of the application')
-        print('                  indicator the classic system tray.')
+        print('  --tb-icon       Use the classic system tray, instead')
+        print('                  of the application indicator.')
         print('')
         print('  --help          Show this help.')
         print('')

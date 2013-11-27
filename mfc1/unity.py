@@ -32,7 +32,7 @@ import gtk
 
 
 class AppIndicator():
-    '''Application Indicator object for the MindFulClock.
+    '''Application Indicator object for the MindfulClock.
       AppIndicator(frame, icon)
       frame = wx.Window
       icon = icon (without extension)
@@ -48,7 +48,7 @@ class AppIndicator():
         # Text dictionairy.
         self.__textdic = textdic
         # Application indicator
-        self.ind = appindicator.Indicator('MindFulClock', icon,
+        self.ind = appindicator.Indicator('MindfulClock', icon,
                                appindicator.CATEGORY_APPLICATION_STATUS,
                                path)
         self.ind.set_status(appindicator.STATUS_ACTIVE)

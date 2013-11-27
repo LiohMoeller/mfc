@@ -34,7 +34,7 @@ _ = wx.GetTranslation
 
 class TBIcon(wx.TaskBarIcon):
     '''mfc1.TBIcon2(frame, icon, title, textdic)
-       Taskbar applet for the MindFulClock.
+       Taskbar applet for the MindfulClock.
        frame = wx.Frame
        icon = path to the icon, shown in the systray.
        title = tooltip of the systray icon.
@@ -153,7 +153,7 @@ class wxTestFrame(wx.Frame):
         # TaskbarIcon
         self.__tbicon = TBIcon(frame=self,
                                icon='icons/mindfulclock_22.png',
-                               title='MindFulClock dev',
+                               title='MindfulClock dev',
                                textdic={'start': 'Start',
                                         'stop': 'Stop',
                                         'show': 'Show',

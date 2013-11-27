@@ -42,7 +42,7 @@ _ = wx.GetTranslation
 
 class GUI(wx.Frame):
     '''mfc1.GUI(systray, tbicon)
-       GUI of the MindFulClock.
+       GUI of the MindfulClock.
        systray = True, False, start minimized in the systemtray.
        tbicon = True, False, use instead of appindicator wx.TaskBarIcon.
 
@@ -122,7 +122,7 @@ class GUI(wx.Frame):
     Event before close the frame.
 
     on_timer(event)
-    Event for timer, the MindFulClock.
+    Event for timer, the MindfulClock.
 
     pygame_sound()
     Play the soundfile with Pygame.
@@ -665,7 +665,7 @@ class GUI(wx.Frame):
         self.Destroy()
 
     def on_timer(self, event):
-        '''Event for timer, the MindFulClock.'''
+        '''Event for timer, the MindfulClock.'''
         timenow = int(time.time())
         if timenow < self.__end:
             # End is not reached.

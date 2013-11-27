@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: MindFulClock 1.0\n"
+"Project-Id-Version: MindfulClock 1.0\n"
 "POT-Creation-Date: 2013-11-20 21:23+CET\n"
 "PO-Revision-Date: 2013-11-20 21:26+0100\n"
 "Last-Translator: Andreas Ulrich <ulrich3110@gmail.com>\n"
