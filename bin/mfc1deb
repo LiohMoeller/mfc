@@ -69,5 +69,5 @@ if __name__ == '__main__':
         import mfc1
         # Run wx
         app = wx.App()
-        frame = mfc1.GUI()
+        frame = mfc1.GUI(systray=mini, tbicon=tbar)
         app.MainLoop()

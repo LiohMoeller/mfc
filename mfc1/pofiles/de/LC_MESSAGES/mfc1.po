@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MindfulClock 1.0\n"
-"POT-Creation-Date: 2013-11-20 21:23+CET\n"
-"PO-Revision-Date: 2013-11-20 21:26+0100\n"
+"POT-Creation-Date: 2013-11-27 21:04+CET\n"
+"PO-Revision-Date: 2013-11-27 21:06+0100\n"
 "Last-Translator: Andreas Ulrich <ulrich3110@gmail.com>\n"
 "Language-Team: erasand <ulrich3110@gmail.com>\n"
 "Language: \n"
@@ -18,59 +18,84 @@ msgstr ""
 "X-Poedit-Country: SWITZERLAND\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: gui.py:260
+#: gui.py:363
+#: gui.py:534
+msgid "Start"
+msgstr "Start"
+
+#: gui.py:364
+#: gui.py:535
+msgid "Stop"
+msgstr "Stop"
+
+#: gui.py:365
+#: gui.py:536
+msgid "Show"
+msgstr "Zeigen"
+
+#: gui.py:366
+#: gui.py:537
+msgid "Hide"
+msgstr "Ausblenden"
+
+#: gui.py:367
+#: gui.py:538
+msgid "Exit"
+msgstr "Beenden"
+
+#: gui.py:376
 msgid "Clock control"
 msgstr "Uhr Kontrolle"
 
-#: gui.py:267
+#: gui.py:383
 msgid "Start Clock"
 msgstr "Starte Uhr"
 
-#: gui.py:273
+#: gui.py:389
 msgid "Stop Clock"
 msgstr "Stop Uhr"
 
-#: gui.py:279
+#: gui.py:395
 msgid "Minimize Clock"
 msgstr "Minimiere Uhr"
 
-#: gui.py:285
+#: gui.py:401
 msgid "Exit Clock"
 msgstr "Beende Uhr"
 
-#: gui.py:324
+#: gui.py:439
 msgid "Time interval in minutes"
 msgstr "Zeit Intervall in Minuten"
 
-#: gui.py:334
+#: gui.py:449
 msgid "Increase time"
 msgstr "Erhöhe Zeit"
 
-#: gui.py:340
+#: gui.py:455
 msgid "Decrease time"
 msgstr "Verringere Zeit"
 
-#: gui.py:368
+#: gui.py:483
 msgid "Sound notification"
 msgstr "Musik Benachrichtigung"
 
-#: gui.py:375
+#: gui.py:490
 msgid "Change sound file"
 msgstr "Wähle Audio Datei"
 
-#: gui.py:381
+#: gui.py:496
 msgid "Preview sound"
 msgstr "Musik Vorschau"
 
-#: gui.py:412
+#: gui.py:546
 msgid "Text notification"
 msgstr "Text Benachrichtigung"
 
-#: gui.py:435
+#: gui.py:569
 msgid "file"
 msgstr "Datei"
 
-#: gui.py:440
+#: gui.py:574
 msgid "Select the sound file"
 msgstr "Wähle die Audio Datei"
 

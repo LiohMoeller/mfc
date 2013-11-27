@@ -781,5 +781,5 @@ class GUI(wx.Frame):
 
 if __name__ == '__main__':
     app = wx.App()
-    frame = GUI(systray=False, tbicon=False)
+    frame = GUI(systray=False, tbicon=True)
     app.MainLoop()

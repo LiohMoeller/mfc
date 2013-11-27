@@ -4,7 +4,7 @@
    |  '-mfc1deb
    '--share
       |--applications
-      |  '--mfc1.desktop
+      |  '--*.desktop
       |--mfc
       |  '--mfc1
       |     |--doku
@@ -16,21 +16,21 @@
       |     |  |  '--*.png
       |     |  |--32
       |     |  |  '--*.png
-      |     |  '--*.png
+      |     |  |--*.png
+      |     |  '--*.svg
       |     |--locale
       |     |  'de
       |     |   '--LC_MESSAGES
-      |     |      '--mfc1.mo
+      |     |      '--*.mo
       |     |--pofiles
       |     |  'de
       |     |   '--LC_MESSAGES
-      |     |      '--mfc1.po
+      |     |      '--*.po
       |     |--sounds
       |     |  '--*.mp3
       |     '--*.py
       '--pixmaps
-         '--mfc1.png
-         '--alarm-clock-indicator.png
+         '--*.png
 
 
 DEBIAN DATEISYSTEM
