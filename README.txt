@@ -18,8 +18,8 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
 - You can start the clock with the menu entry, or with the command:
   <mfc1deb [OPTIONS]>
     --start-minim   Start the clock minimized.
-    --tb-icon       Use instead of the application indicator the
-                    classic system tray.
+    --tb-icon       Use the classic system tray, instead
+                    of the application indicator.
     --help          Show a little help.
 
 
@@ -30,7 +30,7 @@ TRUBBLESHOTTING
 
 REMOVE THE DEBIAN PACKAGE
 - Remove the package <mfc1> from your system.
-    
+
 
 REMOVE THE SETTINGS
 - If the settings are to be removed: Delete the hidden file <.mfc1>
@@ -55,12 +55,12 @@ INSTALLATION THE SOURCECODE DISTRIBUTION
 - the program starts with the command:
   <mfc1dist [OPTIONS]>
     --start-minim   Start the clock minimized.
-    --tb-icon       Use instead of the application indicator the
-                    classic system tray.
+    --tb-icon       Use the classic system tray, instead
+                    of the application indicator.
     --help          Show a little help.
 - For a program starter icons are placed in </pixmaps> in the
   repisotory.
-- Has the application indicator no icon, you have to copy the file
+- If application indicator icon is not displayed, please copy the file
   </pixmaps/alarm-clock-indicator.png> from the repository to
   </usr/share/pixmaps>.
 
@@ -71,7 +71,7 @@ REMOVE THE SOURCECODE DISTRIBUTION
   directory </usr/local/lib/python2.7/dist-packages/mfc1>
   file </usr/local/lib/python2.7/dist-packages/mfc1-1.0.egg-info>
   file </usr/local/bin/mfc1dist>
-    
+
 
 RELEASE NOTES 1.0
 - Notification with text or sound.
@@ -101,7 +101,7 @@ GERMAN TRANSLATIONS
    ./pofiles/de/LC_MESSAGES/old-mfc1.po \
    ./pofiles/de/LC_MESSAGES/mfc1.po>
 - Make the translation, edit the .po file:
-  - Replace <line Content-Type: text/plain; charset=CHARSET> with 
+  - Replace <line Content-Type: text/plain; charset=CHARSET> with
     <line Content-Type: text/plain; charset=utf-8>.
   - By editing the .PO file with the PO-Edit, you can optionally write
     the .MO file with saving the .po file.
