@@ -1,12 +1,12 @@
-MindFulClock 1.0
+MindfulClock 1.0
 
-With the MindFulClock you turn your device into a Bell of Mindfulness.
-During the day you hear regularly the bell and it gives you the
-opportunity to pause for a moment and enjoy the present of Mindfulness.
+With the MindfulClock you turn your device into a Bell of Mindfulness.
+During the day, it will periodically invite the bell and gives you the
+opportunity to pause, and enjoy the present moment in mindfulness.
 
 
 OPERATING SYSTEM
-- The MindFulClock ist programmed in Python wiht the GUI- toolkit
+- The MindfulClock is programmed in Python with the GUI toolkit
   wxPython. It runs on all platforms which support python and wxpython.
 - Its specially designed for Ubuntu with the Unity desktop.
 
@@ -19,8 +19,8 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
 - You can start the clock with the menu entry, or with the command:
   <mfc1deb [OPTIONS]>
     --start-minim   Start the clock minimized.
-    --tb-icon       Use instead of the application indicator the
-                    classic system tray.
+    --tb-icon       Use the classic system tray, instead
+                    of the application indicator.
     --help          Show a little help.
 
 
@@ -56,12 +56,12 @@ INSTALLATION THE SOURCECODE DISTRIBUTION
 - the program starts with the command:
   <mfc1dist [OPTIONS]>
     --start-minim   Start the clock minimized.
-    --tb-icon       Use instead of the application indicator the
-                    classic system tray.
+    --tb-icon       Use the classic system tray, instead
+                    of the application indicator.
     --help          Show a little help.
 - For a program starter icons are placed in </pixmaps> in the
   repisotory.
-- Has the application indicator no icon, you have to copy the file
+- If application indicator icon is not displayed, please copy the file
   </pixmaps/alarm-clock-indicator.png> from the repository to
   </usr/share/pixmaps>.
 

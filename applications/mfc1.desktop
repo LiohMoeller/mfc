@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
-Name=MindFulClock
+Name=MindfulClock
 GenericName=
 Comment=Turn your device into a Bell of Mindfulness.
 Categories=Utility;
@@ -11,7 +11,7 @@ Icon=clock-icon-512x512.png
 Terminal=false
 Type=Application
 StartupNotify=false
-Name[de]=MindFulClock
+Name[de]=MindfulClock
 GenericName[de]=
 Comment[de]=Verwandeln Sie Ihr Gerät in eine Glocke der Achtsamkeit.
 

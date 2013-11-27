@@ -30,7 +30,7 @@ import wx
 
 class Popup(wx.PopupTransientWindow):
     '''mfc1.Popup(parent, style, text, font, colors, icon)
-       Show the text notification for the MindFulClock.
+       Show the text notification for the MindfulClock.
        parent = wx.window
        style = wx.SIMPLE_BORDER, wx.RAISED_BORDER, wx.SUNKEN_BORDER,
                wx.NO_BORDER
