@@ -4,6 +4,7 @@ With the MindfulClock you turn your device into a Bell of Mindfulness.
 During the day, it will periodically invite the bell and gives you the
 opportunity to pause, and enjoy the present moment in mindfulness.
 
+
 OPERATING SYSTEM
 - The MindfulClock is programmed in Python wiht the GUI toolkit
   wxPython. It runs on all platforms which support python and wxpython.
@@ -134,4 +135,4 @@ SOUND WORK
   <pv-bell.mp3> by Marcus Möller
 
 
-26.11.2013 / Andreas Ulrich
+27.11.2013 / Andreas Ulrich, Marcus Möller
