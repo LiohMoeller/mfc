@@ -40,7 +40,7 @@ _ = wx.GetTranslation
 
 class GUI(wx.Frame):
     '''mfc1.GUI()
-       GUI of the MindFulClock.
+       GUI of the MindfulClock.
 
     config_load()
     Load the settings with wx.config.
@@ -100,7 +100,7 @@ class GUI(wx.Frame):
     Event before close the frame.
 
     on_timer(event)
-    Event for timer, the MindFulClock.
+    Event for timer, the MindfulClock.
 
     pygame_sound()
     Play the soundfile with Pygame.
@@ -538,7 +538,7 @@ class GUI(wx.Frame):
         event.Skip()
 
     def on_timer(self, event):
-        '''Event for timer, the MindFulClock.'''
+        '''Event for timer, the MindfulClock.'''
         timenow = int(time.time())
         if timenow < self.__end:
             # End is not reached.
