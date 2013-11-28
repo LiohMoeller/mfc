@@ -29,11 +29,12 @@ import sys
 import wx
 
 
-'''The start command for the debian package.
-   mfc1deb [OPTIONS]
+'''The start command for the sourcecode distribution.
+   mfc1dist [OPTIONS]
      --start-minim: Start the clock minimized.
-     --tb-icon: Use the classic system tray, instead
-                of the application indicator.
+     --tb-icon: Use instead of the application indicator the classic
+                system tray.
+     --dist: Start the installed source distribution.
      --help: Show this help.
 
 '''
@@ -42,14 +43,22 @@ import wx
 if __name__ == '__main__':
     # Command line options
     clio = sys.argv
+    # Check start minimized.
     if '--start-minim' in clio:
         mini = True
     else:
         mini = False
+    # Check use system tray.
     if '--tb-icon' in clio:
         tbar = True
     else:
         tbar = False
+    # Check source distribution start.
+    # Debian package is the default start mode.
+    stat = 'deb'
+    if '--dist' in clio:
+        start = 'dist'
+    # Check help
     if '--help' in clio:
         print('')
         print('Source code distribution of the MindfulClock.')
@@ -60,14 +69,18 @@ if __name__ == '__main__':
         print('  --tb-icon       Use the classic system tray, instead')
         print('                  of the application indicator.')
         print('')
+        print('  --dist          Start the installed source')
+        print('                  distribution.')
+        print('')
         print('  --help          Show this help.')
         print('')
     else:
-        # Append mfc to path
-        sys.path.append('/usr/share/mfc')
+        if start == 'deb':
+            # Start debian package, append mfc as import directory.
+            sys.path.append('/usr/share/mfc')
         # Import mfc1
         import mfc1
-        # Run wx
+        # Run
         app = wx.App()
         frame = mfc1.GUI(systray=mini, tbicon=tbar)
         app.MainLoop()

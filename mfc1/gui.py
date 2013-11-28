@@ -219,8 +219,15 @@ class GUI(wx.Frame):
         self.SetSizer(vbox)
         # Disable stop button
         self.__btnstop.Enable(False)
-        # System tray
-        self.__systray = systray
+        # System tray from command line options
+        if systray:
+            self.__systray = True
+        else:
+            if self.__miniopt.GetValue():
+                # Minimize option is set.
+                self.__systray = True
+            else:
+                self.__systray = False
         if tbicon:
             # TaskBarIcon
             self.init_tbicon()
@@ -305,6 +312,8 @@ class GUI(wx.Frame):
         # Set frame size.
         size = self.GetSize()
         self.__data.set_user('frame_size', (size[0], size[1]))
+        # Set start minimize option
+        self.__data.set_user('mini_opt', self.__miniopt.GetValue())
         # Get data dictionariy as text.
         textdic = self.__data.get_user_textdic()
         # Write text.
@@ -403,6 +412,14 @@ class GUI(wx.Frame):
         self.__gaugerange = self.__data.get_sys('gauge')
         self.__gauge = wx.Gauge(parent=self,
                                 range=self.__gaugerange)
+        # Checkbox option
+        self.__miniopt = wx.CheckBox(parent = self,
+                                     label=_(u'Start minimized'))
+        # Set value from user datas.
+        if self.__data.get_user('mini_opt'):
+            self.__miniopt.SetValue(True)
+        else:
+            self.__miniopt.SetValue(False)
         # Bindings.
         self.__btnstart.Bind(event=wx.EVT_BUTTON, handler=self.on_start)
         self.__btnstop.Bind(event=wx.EVT_BUTTON, handler=self.on_stop)
@@ -429,6 +446,9 @@ class GUI(wx.Frame):
                  border=self.__bdist)
         vsiz.Add(item=hsiz, proportion=1, flag=wx.EXPAND)
         vsiz.Add(item=self.__gauge,
+                 flag=wx.EXPAND | wx.ALL,
+                 border=self.__bdist)
+        vsiz.Add(item=self.__miniopt,
                  flag=wx.EXPAND | wx.ALL,
                  border=self.__bdist)
         return(vsiz)
@@ -781,5 +801,5 @@ class GUI(wx.Frame):
 
 if __name__ == '__main__':
     app = wx.App()
-    frame = GUI(systray=False, tbicon=True)
+    frame = GUI(systray=False, tbicon=False)
     app.MainLoop()

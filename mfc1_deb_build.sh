@@ -16,9 +16,17 @@ export DEBFULLNAME
 # Create working directory.
 mkdir $WORKDIR
 
+# Copy mindfulclock to ./bin
+mkdir bin
+cp mindfulclock1 ./bin
+
 # Create source tar.gz
 tar -czf mfc1-$VERS.tar.gz applications/ bin/ pixmaps/ mfc1/
 mv mfc1-$VERS.tar.gz $WORKDIR/
+
+# Delete ./bin and mindfulclock1
+rm bin/mindfulclock1
+rmdir bin
 
 # Exctract source tar.gz
 cd $WORKDIR
@@ -34,11 +42,20 @@ cd debian
 rm compat docs *.ex *.Debian *.source source *.EX
 rm -r source
 
-# Show directory
+# Edit all files in /debian
+gedit *
+
 echo " "
-ls
+echo "..Press [enter] when all changes are done."
+read TASTE
+
+# Change directory
+cd ..
+
+# Build debian package
+debuild
+
 echo " "
-echo "Please edit those files .."
-echo "..Press [enter] to continue"
+echo "..Press [enter] to continue."
 read TASTE
 

@@ -1,7 +1,7 @@
 /
 '--usr
    |--bin
-   |  '-mfc1deb
+   |  '-mindfulclock1
    '--share
       |--applications
       |  '--*.desktop

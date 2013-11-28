@@ -85,5 +85,5 @@ setup(name='mfc1',
                              'locale/de/LC_MESSAGES/*.mo',
                              'pofiles/de/LC_MESSAGES/*.po',
                              'sounds/*.mp3']},
-      scripts=['mfc1dist'],
+      scripts=['mindfulclock1'],
       license='GPL3')

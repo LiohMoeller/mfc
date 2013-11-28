@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MindfulClock 1.0\n"
-"POT-Creation-Date: 2013-11-27 21:04+CET\n"
-"PO-Revision-Date: 2013-11-27 21:06+0100\n"
+"POT-Creation-Date: 2013-11-28 21:48+CET\n"
+"PO-Revision-Date: 2013-11-28 21:48+0100\n"
 "Last-Translator: Andreas Ulrich <ulrich3110@gmail.com>\n"
 "Language-Team: erasand <ulrich3110@gmail.com>\n"
 "Language: \n"
@@ -18,84 +18,88 @@ msgstr ""
 "X-Poedit-Country: SWITZERLAND\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: gui.py:363
-#: gui.py:534
+#: gui.py:372
+#: gui.py:554
 msgid "Start"
 msgstr "Start"
 
-#: gui.py:364
-#: gui.py:535
+#: gui.py:373
+#: gui.py:555
 msgid "Stop"
 msgstr "Stop"
 
-#: gui.py:365
-#: gui.py:536
+#: gui.py:374
+#: gui.py:556
 msgid "Show"
 msgstr "Zeigen"
 
-#: gui.py:366
-#: gui.py:537
+#: gui.py:375
+#: gui.py:557
 msgid "Hide"
 msgstr "Ausblenden"
 
-#: gui.py:367
-#: gui.py:538
+#: gui.py:376
+#: gui.py:558
 msgid "Exit"
 msgstr "Beenden"
 
-#: gui.py:376
+#: gui.py:385
 msgid "Clock control"
 msgstr "Uhr Kontrolle"
 
-#: gui.py:383
+#: gui.py:392
 msgid "Start Clock"
 msgstr "Starte Uhr"
 
-#: gui.py:389
+#: gui.py:398
 msgid "Stop Clock"
 msgstr "Stop Uhr"
 
-#: gui.py:395
+#: gui.py:404
 msgid "Minimize Clock"
 msgstr "Minimiere Uhr"
 
-#: gui.py:401
+#: gui.py:410
 msgid "Exit Clock"
 msgstr "Beende Uhr"
 
-#: gui.py:439
+#: gui.py:417
+msgid "Start minimized"
+msgstr "Minimiert starten"
+
+#: gui.py:459
 msgid "Time interval in minutes"
 msgstr "Zeit Intervall in Minuten"
 
-#: gui.py:449
+#: gui.py:469
 msgid "Increase time"
 msgstr "Erhöhe Zeit"
 
-#: gui.py:455
+#: gui.py:475
 msgid "Decrease time"
 msgstr "Verringere Zeit"
 
-#: gui.py:483
+#: gui.py:503
 msgid "Sound notification"
 msgstr "Musik Benachrichtigung"
 
-#: gui.py:490
+#: gui.py:510
 msgid "Change sound file"
 msgstr "Wähle Audio Datei"
 
-#: gui.py:496
+#: gui.py:516
 msgid "Preview sound"
 msgstr "Musik Vorschau"
 
-#: gui.py:546
+#: gui.py:566
 msgid "Text notification"
 msgstr "Text Benachrichtigung"
 
-#: gui.py:569
+#: gui.py:589
 msgid "file"
 msgstr "Datei"
 
-#: gui.py:574
+#: gui.py:594
 msgid "Select the sound file"
 msgstr "Wähle die Audio Datei"
 

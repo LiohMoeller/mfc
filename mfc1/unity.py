@@ -132,7 +132,6 @@ class AppIndicator():
 
     def set_remain_time(self, text):
         '''Set the remaining time.'''
-        self.ind.set_label(text)
         label = self.remain.child
         label.set_text(text)
 

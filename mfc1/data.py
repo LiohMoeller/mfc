@@ -96,7 +96,7 @@ class Data():
         # Popup colors, tuple with 2 colours, (text, background).
         # Colors in html format: '#RRGGBB', None for standard colour.
         self.__sys['popup_colors'] = (None, None)
-        self.__sys['systray_icon'] = 'icons/mindfulclock_22.png'
+        self.__sys['systray_icon'] = 'icons/mindfulclock_32.png'
         self.__sys['wxtimer'] = 500
         # Set default user datas.
         self.set_user_default()
@@ -130,11 +130,12 @@ class Data():
         '''Set the default dictionairy.'''
         # User dictionariy.
         self.__user = {}
-        self.__user['frame_size'] = (400, 360)
+        self.__user['frame_size'] = (400, 400)
         self.__user['msg_size'] = (300, 300)
         self.__user['interval'] = 30
         self.__user['text'] = 'Text ..'
         self.__user['sound'] = 'sounds/pv-bell.mp3'
+        self.__user['mini_opt'] = False
 
     def set_user_textdic(self, text):
         '''Set the text as new user data dictionairy.'''
@@ -184,3 +185,11 @@ class Data():
                     else:
                         # Text is not set, no text message.
                         self.__user[key] = newval
+                elif key == 'mini_opt':
+                    if newval:
+                        # Set True
+                        self.__user[key] = True
+                    elif not newval:
+                        # Set False
+                        self.__user[key] = False
+

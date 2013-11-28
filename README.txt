@@ -17,10 +17,11 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
   Klick on RAW view, the download will start.
 - Run the .deb, the package <mfc1> will be installed.
 - You can start the clock with the menu entry, or with the command:
-  <mfc1deb [OPTIONS]>
+  <mindfulclock1 [OPTIONS]>
     --start-minim   Start the clock minimized.
     --tb-icon       Use the classic system tray, instead
                     of the application indicator.
+    --dist          Start the installed source distribution.
     --help          Show a little help.
 
 
@@ -53,13 +54,15 @@ INSTALLATION THE SOURCECODE DISTRIBUTION
 - Extract the donloaded file.
 - Go to the directory <mfc1-1.0>, where the file <setup.py> is placed.
 - Run the command line: <sudo ./setup.py install>
+- Python installs the source distribution.
 - the program starts with the command:
-  <mfc1dist [OPTIONS]>
+  <mindfulclock1 --dist [OPTIONS]>
     --start-minim   Start the clock minimized.
     --tb-icon       Use the classic system tray, instead
                     of the application indicator.
+    --dist          Start the installed source distribution.
     --help          Show a little help.
-- For a program starter icons are placed in </pixmaps> in the
+- For a program starter icons are placed in </mfc1/icons> in the
   repisotory.
 - If application indicator icon is not displayed, please copy the file
   </pixmaps/alarm-clock-indicator.png> from the repository to
@@ -135,4 +138,4 @@ SOUND WORK
   <pv-bell.mp3> by Marcus Möller
 
 
-27.11.2013 / Andreas Ulrich, Marcus Möller
+28.11.2013 / Andreas Ulrich, Marcus Möller
