@@ -1,0 +1,13 @@
+Package: mfc1
+Version: 1.0-1
+Architecture: all
+Maintainer: Andreas Ulrich <ulrich3110@gmail.com>
+Installed-Size: 689
+Depends: python-wxgtk2.8, python-pygame, timidity
+Section: misc
+Priority: option
+Homepage: https://github.com/ulrich3110/mfc
+Description: MindfulClock, turn your device into a Bell of Mindfulness.
+ With the MindfulClock you turn your device into a Bell of Mindfulness.
+ During the day, it will periodically invite the bell and gives you the
+ opportunity to pause, and enjoy the present moment in mindfulness.

@@ -18,11 +18,11 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
 - Run the .deb, the package <mfc1> will be installed.
 - You can start the clock with the menu entry, or with the command:
   <mindfulclock1 [OPTIONS]>
-    --start-minim   Start the clock minimized.
-    --tb-icon       Use the classic system tray, instead
-                    of the application indicator.
-    --dist          Start the installed source distribution.
-    --help          Show a little help.
+    --start-tna   Start the clock minimized in
+                  the Taskbar Notification Area.
+    --taskbar     Use the classic taskbar,
+                  instead of the application indicator.
+    --help        Show a little help.
 
 
 TRUBBLESHOTTING
@@ -56,12 +56,12 @@ INSTALLATION THE SOURCECODE DISTRIBUTION
 - Run the command line: <sudo ./setup.py install>
 - Python installs the source distribution.
 - the program starts with the command:
-  <mindfulclock1 --dist [OPTIONS]>
-    --start-minim   Start the clock minimized.
-    --tb-icon       Use the classic system tray, instead
-                    of the application indicator.
-    --dist          Start the installed source distribution.
-    --help          Show a little help.
+  <mindfulclock1 [OPTIONS]>
+    --start-tna   Start the clock minimized in
+                  the Taskbar Notification Area.
+    --taskbar     Use the classic taskbar,
+                  instead of the application indicator.
+    --help        Show a little help.
 - For a program starter icons are placed in </mfc1/icons> in the
   repisotory.
 - If application indicator icon is not displayed, please copy the file
@@ -135,7 +135,7 @@ ART WORK
 
 
 SOUND WORK
-  <pv-bell.mp3> by Marcus Möller
+  <pv-bell.ogg> by Marcus Möller
 
 
-28.11.2013 / Andreas Ulrich, Marcus Möller
+30.11.2013 / Andreas Ulrich, Marcus Möller

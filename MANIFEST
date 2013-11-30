@@ -12,14 +12,10 @@ mfc1/unitest.py
 mfc1/unity.py
 mfc1/doku/gpl-3-0_de.html
 mfc1/doku/gpl-3-0_en.html
-mfc1/icons/Icon.253760.png
 mfc1/icons/alarm-clock-indicator.png
 mfc1/icons/clock-icon-512x512.png
-mfc1/icons/clock_ubuntu_3.png
-mfc1/icons/clock_ubuntu_3.svg
 mfc1/icons/mindfulclock.png
-mfc1/icons/mindfulclock_32.png
-mfc1/icons/mindfulclock_48.png
+mfc1/icons/mindfulclock_22.png
 mfc1/icons/16/go-down.png
 mfc1/icons/16/list-add.png
 mfc1/icons/16/list-remove.png
@@ -50,4 +46,4 @@ mfc1/icons/32/weather-clear.png
 mfc1/locale/de/LC_MESSAGES/mfc1.mo
 mfc1/pofiles/de/LC_MESSAGES/mfc1.po
 mfc1/pofiles/de/LC_MESSAGES/old-mfc1.po
-mfc1/sounds/pv-bell.mp3
+mfc1/sounds/pv-bell.ogg

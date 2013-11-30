@@ -1,0 +1,264 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): -D_FORTIFY_SOURCE=2
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): -Wl,-Bsymbolic-functions -Wl,-z,relro
+dpkg-buildpackage: Quellpaket mfc1
+dpkg-buildpackage: Quellversion 1.0-1
+dpkg-buildpackage: Quellen geändert durch Andreas Ulrich <ulrich3110@gmail.com>
+ dpkg-source --before-build mfc1-1.0
+dpkg-buildpackage: Host-Architektur amd64
+ fakeroot debian/rules clean
+dh clean  --with python2
+dh: No compatibility level specified in debian/compat
+dh: This package will soon FTBFS; time to fix it!
+dh: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_testdir
+   dh_auto_clean
+dh_auto_clean: No compatibility level specified in debian/compat
+dh_auto_clean: This package will soon FTBFS; time to fix it!
+dh_auto_clean: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_clean
+dh_clean: No compatibility level specified in debian/compat
+dh_clean: This package will soon FTBFS; time to fix it!
+dh_clean: Compatibility levels before 5 are deprecated (level 1 in use)
+ dpkg-source -b mfc1-1.0
+dpkg-source: Warnung: kein Quellformat in debian/source/format angegeben, lesen Sie dpkg-source(1)
+dpkg-source: Information: Quellformat »1.0« wird verwendet
+dpkg-source: Information: mfc1 wird unter Benutzung des existierenden mfc1_1.0.orig.tar.gz gebaut
+dpkg-source: Information: mfc1 wird in mfc1_1.0-1.diff.gz gebaut
+dpkg-source: Information: mfc1 wird in mfc1_1.0-1.dsc gebaut
+ debian/rules build
+dh build  --with python2
+dh: No compatibility level specified in debian/compat
+dh: This package will soon FTBFS; time to fix it!
+dh: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_testdir
+   dh_auto_configure
+dh_auto_configure: No compatibility level specified in debian/compat
+dh_auto_configure: This package will soon FTBFS; time to fix it!
+dh_auto_configure: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_auto_build
+dh_auto_build: No compatibility level specified in debian/compat
+dh_auto_build: This package will soon FTBFS; time to fix it!
+dh_auto_build: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_auto_test
+dh_auto_test: No compatibility level specified in debian/compat
+dh_auto_test: This package will soon FTBFS; time to fix it!
+dh_auto_test: Compatibility levels before 5 are deprecated (level 1 in use)
+ fakeroot debian/rules binary
+dh binary  --with python2
+dh: No compatibility level specified in debian/compat
+dh: This package will soon FTBFS; time to fix it!
+dh: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_testroot
+   dh_prep
+dh_prep: No compatibility level specified in debian/compat
+dh_prep: This package will soon FTBFS; time to fix it!
+dh_prep: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installdirs
+dh_installdirs: No compatibility level specified in debian/compat
+dh_installdirs: This package will soon FTBFS; time to fix it!
+dh_installdirs: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_auto_install
+dh_auto_install: No compatibility level specified in debian/compat
+dh_auto_install: This package will soon FTBFS; time to fix it!
+dh_auto_install: Compatibility levels before 5 are deprecated (level 1 in use)
+   debian/rules override_dh_install
+make[1]: Betrete Verzeichnis '/home/tygrys/Dokumente/Daten/Andy/ERASAND/MFC/GIT/1-0/build/mfc1-1.0'
+dh_install mfc1/* /usr/share/mfc/mfc1/
+dh_install: No compatibility level specified in debian/compat
+dh_install: This package will soon FTBFS; time to fix it!
+dh_install: Compatibility levels before 5 are deprecated (level 1 in use)
+dh_install bin/mindfulclock1 /usr/bin/
+dh_install: No compatibility level specified in debian/compat
+dh_install: This package will soon FTBFS; time to fix it!
+dh_install: Compatibility levels before 5 are deprecated (level 1 in use)
+dh_install pixmaps/*.png /usr/share/pixmaps/
+dh_install: No compatibility level specified in debian/compat
+dh_install: This package will soon FTBFS; time to fix it!
+dh_install: Compatibility levels before 5 are deprecated (level 1 in use)
+dh_install applications/mindfulclock.desktop /usr/share/applications/
+dh_install: No compatibility level specified in debian/compat
+dh_install: This package will soon FTBFS; time to fix it!
+dh_install: Compatibility levels before 5 are deprecated (level 1 in use)
+make[1]: Verlasse Verzeichnis '/home/tygrys/Dokumente/Daten/Andy/ERASAND/MFC/GIT/1-0/build/mfc1-1.0'
+   dh_installdocs
+dh_installdocs: No compatibility level specified in debian/compat
+dh_installdocs: This package will soon FTBFS; time to fix it!
+dh_installdocs: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installchangelogs
+dh_installchangelogs: No compatibility level specified in debian/compat
+dh_installchangelogs: This package will soon FTBFS; time to fix it!
+dh_installchangelogs: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installexamples
+dh_installexamples: No compatibility level specified in debian/compat
+dh_installexamples: This package will soon FTBFS; time to fix it!
+dh_installexamples: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installman
+dh_installman: No compatibility level specified in debian/compat
+dh_installman: This package will soon FTBFS; time to fix it!
+dh_installman: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installcatalogs
+dh_installcatalogs: No compatibility level specified in debian/compat
+dh_installcatalogs: This package will soon FTBFS; time to fix it!
+dh_installcatalogs: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installcron
+dh_installcron: No compatibility level specified in debian/compat
+dh_installcron: This package will soon FTBFS; time to fix it!
+dh_installcron: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installdebconf
+dh_installdebconf: No compatibility level specified in debian/compat
+dh_installdebconf: This package will soon FTBFS; time to fix it!
+dh_installdebconf: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installemacsen
+dh_installemacsen: No compatibility level specified in debian/compat
+dh_installemacsen: This package will soon FTBFS; time to fix it!
+dh_installemacsen: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installifupdown
+dh_installifupdown: No compatibility level specified in debian/compat
+dh_installifupdown: This package will soon FTBFS; time to fix it!
+dh_installifupdown: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installinfo
+dh_installinfo: No compatibility level specified in debian/compat
+dh_installinfo: This package will soon FTBFS; time to fix it!
+dh_installinfo: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installinit
+dh_installinit: No compatibility level specified in debian/compat
+dh_installinit: This package will soon FTBFS; time to fix it!
+dh_installinit: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installmenu
+dh_installmenu: No compatibility level specified in debian/compat
+dh_installmenu: This package will soon FTBFS; time to fix it!
+dh_installmenu: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installmime
+dh_installmime: No compatibility level specified in debian/compat
+dh_installmime: This package will soon FTBFS; time to fix it!
+dh_installmime: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installmodules
+dh_installmodules: No compatibility level specified in debian/compat
+dh_installmodules: This package will soon FTBFS; time to fix it!
+dh_installmodules: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installlogcheck
+dh_installlogcheck: No compatibility level specified in debian/compat
+dh_installlogcheck: This package will soon FTBFS; time to fix it!
+dh_installlogcheck: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installlogrotate
+dh_installlogrotate: No compatibility level specified in debian/compat
+dh_installlogrotate: This package will soon FTBFS; time to fix it!
+dh_installlogrotate: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installpam
+dh_installpam: No compatibility level specified in debian/compat
+dh_installpam: This package will soon FTBFS; time to fix it!
+dh_installpam: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installppp
+dh_installppp: No compatibility level specified in debian/compat
+dh_installppp: This package will soon FTBFS; time to fix it!
+dh_installppp: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installudev
+dh_installudev: No compatibility level specified in debian/compat
+dh_installudev: This package will soon FTBFS; time to fix it!
+dh_installudev: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installwm
+dh_installwm: No compatibility level specified in debian/compat
+dh_installwm: This package will soon FTBFS; time to fix it!
+dh_installwm: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installxfonts
+dh_installxfonts: No compatibility level specified in debian/compat
+dh_installxfonts: This package will soon FTBFS; time to fix it!
+dh_installxfonts: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installgsettings
+dh_installgsettings: No compatibility level specified in debian/compat
+dh_installgsettings: This package will soon FTBFS; time to fix it!
+dh_installgsettings: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_bugfiles
+dh_bugfiles: No compatibility level specified in debian/compat
+dh_bugfiles: This package will soon FTBFS; time to fix it!
+dh_bugfiles: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_ucf
+dh_ucf: No compatibility level specified in debian/compat
+dh_ucf: This package will soon FTBFS; time to fix it!
+dh_ucf: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_lintian
+dh_lintian: No compatibility level specified in debian/compat
+dh_lintian: This package will soon FTBFS; time to fix it!
+dh_lintian: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_gconf
+dh_gconf: No compatibility level specified in debian/compat
+dh_gconf: This package will soon FTBFS; time to fix it!
+dh_gconf: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_icons
+dh_icons: No compatibility level specified in debian/compat
+dh_icons: This package will soon FTBFS; time to fix it!
+dh_icons: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_perl
+dh_perl: No compatibility level specified in debian/compat
+dh_perl: This package will soon FTBFS; time to fix it!
+dh_perl: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_python2
+   dh_usrlocal
+dh_usrlocal: No compatibility level specified in debian/compat
+dh_usrlocal: This package will soon FTBFS; time to fix it!
+dh_usrlocal: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_link
+dh_link: No compatibility level specified in debian/compat
+dh_link: This package will soon FTBFS; time to fix it!
+dh_link: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_compress
+dh_compress: No compatibility level specified in debian/compat
+dh_compress: This package will soon FTBFS; time to fix it!
+dh_compress: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_fixperms
+dh_fixperms: No compatibility level specified in debian/compat
+dh_fixperms: This package will soon FTBFS; time to fix it!
+dh_fixperms: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_installdeb
+dh_installdeb: No compatibility level specified in debian/compat
+dh_installdeb: This package will soon FTBFS; time to fix it!
+dh_installdeb: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_gencontrol
+dh_gencontrol: No compatibility level specified in debian/compat
+dh_gencontrol: This package will soon FTBFS; time to fix it!
+dh_gencontrol: Compatibility levels before 5 are deprecated (level 1 in use)
+dpkg-gencontrol: Warnung: Feld Depends von Paket mfc1: unbekannte Substitutionsvariable ${shlibs:Depends}
+   dh_md5sums
+dh_md5sums: No compatibility level specified in debian/compat
+dh_md5sums: This package will soon FTBFS; time to fix it!
+dh_md5sums: Compatibility levels before 5 are deprecated (level 1 in use)
+   dh_builddeb
+dh_builddeb: No compatibility level specified in debian/compat
+dh_builddeb: This package will soon FTBFS; time to fix it!
+dh_builddeb: Compatibility levels before 5 are deprecated (level 1 in use)
+dpkg-deb: Warnung: »debian/tmp/DEBIAN/control« enthält benutzerdefinierten Prioritätswert »option«
+dpkg-deb: Warnung: 1 Warnung wegen der control-Datei(en) wird ignoriert
+
+dpkg-deb: Paket »mfc1« wird in »../mfc1_1.0-1_all.deb« gebaut.
+dh_builddeb: No compatibility level specified in debian/compat
+dh_builddeb: This package will soon FTBFS; time to fix it!
+dh_builddeb: Compatibility levels before 5 are deprecated (level 1 in use)
+ dpkg-genchanges  >../mfc1_1.0-1_amd64.changes
+dpkg-genchanges: kompletter Quellcode beim Hochladen hinzufügen
+ dpkg-source --after-build mfc1-1.0
+dpkg-buildpackage: Alles hochzuladen (Originalquellen enthalten)
+Now running lintian...
+W: mfc1 source: debhelper-compat-file-is-missing
+W: mfc1 source: package-uses-deprecated-debhelper-compat-version 1
+E: mfc1 source: missing-build-dependency-for-dh-addon python2 => python | python-all | python-dev | python-all-dev
+W: mfc1 source: syntax-error-in-dep5-copyright line 14: Continuation line outside a paragraph.
+W: mfc1 source: out-of-date-standards-version 3.9.2 (current is 3.9.3)
+W: mfc1: new-package-should-close-itp-bug
+W: mfc1: wrong-bug-number-in-closes l3:#nnnn
+W: mfc1: copyright-has-url-from-dh_make-boilerplate
+E: mfc1: unknown-priority option
+W: mfc1: binary-without-manpage usr/bin/mindfulclock1
+E: mfc1: python-script-but-no-python-dep usr/bin/mindfulclock1
+E: mfc1: python-script-but-no-python-dep usr/share/mfc/mfc1/gui.py
+E: mfc1: python-script-but-no-python-dep usr/share/mfc/mfc1/unitest.py
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile mfc1_1.0-1.dsc Andreas Ulrich <ulrich3110@gmail.com>
+
+ signfile mfc1_1.0-1_amd64.changes Andreas Ulrich <ulrich3110@gmail.com>
+
+Successfully signed dsc and changes files
