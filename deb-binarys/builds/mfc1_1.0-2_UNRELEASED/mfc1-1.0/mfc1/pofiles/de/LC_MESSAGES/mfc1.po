@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MindfulClock 1.0\n"
+"POT-Creation-Date: 2013-11-30 22:00+CET\n"
+"PO-Revision-Date: 2013-11-30 10:38+0100\n"
+"Last-Translator: Andreas Ulrich <ulrich3110@gmail.com>\n"
+"Language-Team: erasand <ulrich3110@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: SWITZERLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: gui.py:372 gui.py:556
+msgid "Start"
+msgstr "Start"
+
+#: gui.py:373 gui.py:557
+msgid "Stop"
+msgstr "Stop"
+
+#: gui.py:374 gui.py:558
+msgid "Show"
+msgstr "Zeigen"
+
+#: gui.py:375 gui.py:559
+msgid "Hide"
+msgstr "Ausblenden"
+
+#: gui.py:376 gui.py:560
+msgid "Exit"
+msgstr "Beenden"
+
+#: gui.py:385
+msgid "Clock control"
+msgstr "Uhr Kontrolle"
+
+#: gui.py:392
+msgid "Start Clock"
+msgstr "Starte Uhr"
+
+#: gui.py:398
+msgid "Stop Clock"
+msgstr "Stop Uhr"
+
+#: gui.py:404
+msgid "Minimize to Taskbar Notification Area"
+msgstr "Zum Benachrichtigungsfeld minimieren"
+
+#: gui.py:411
+msgid "Exit Clock"
+msgstr "Beende Uhr"
+
+#: gui.py:417
+msgid "Start in the Taskbar Notification Area"
+msgstr "Im Benachrichtigungsfeld starten"
+
+#: gui.py:461
+msgid "Time interval in minutes"
+msgstr "Zeit Intervall in Minuten"
+
+#: gui.py:471
+msgid "Increase time"
+msgstr "Erhöhe Zeit"
+
+#: gui.py:477
+msgid "Decrease time"
+msgstr "Verringere Zeit"
+
+#: gui.py:505
+msgid "Sound notification"
+msgstr "Klang Benachrichtigung"
+
+#: gui.py:512
+msgid "Change sound file"
+msgstr "Wähle Audio Datei"
+
+#: gui.py:518
+msgid "Preview sound"
+msgstr "Musik Vorschau"
+
+#: gui.py:568
+msgid "Text notification"
+msgstr "Text Benachrichtigung"
+
+#: gui.py:591
+msgid "file"
+msgstr "Datei"
+
+#: gui.py:596
+msgid "Select the sound file"
+msgstr "Wähle die Audio Datei"
+
+#~ msgid "Minimize Clock"
+#~ msgstr "Minimiere Uhr"
+
+#~ msgid "Start minimized"
+#~ msgstr "Minimiert starten"

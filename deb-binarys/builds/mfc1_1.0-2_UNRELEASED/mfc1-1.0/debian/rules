@@ -10,11 +10,11 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with python2
+	dh $@  --with python2
 
 override_dh_install:
 	dh_install mfc1/* /usr/share/mfc/mfc1/
-	dh_install bin/mfc1deb /usr/bin/
-	dh_install pixmaps/mfc1.png /usr/share/pixmaps/
-	dh_install applications/mfc1.desktop /usr/share/applications/
+	dh_install bin/mindfulclock1 /usr/bin/
+	dh_install pixmaps/*.png /usr/share/pixmaps/
+	dh_install applications/mindfulclock.desktop /usr/share/applications/
 

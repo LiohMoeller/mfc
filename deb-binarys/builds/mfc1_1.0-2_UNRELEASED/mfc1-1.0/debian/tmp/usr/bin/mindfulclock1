@@ -1,0 +1,83 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# With the MindfulClock you turn your device into a Bell of Mindfulness.
+# Concept, Design: Marcurs Möller
+#                  <marcus.moeller@outlook.com>
+#                  <http://apps.microsoft.com/windows/de-de/app/
+#                   mindfulclock/58063160-9cc6-4dee-9d92-17df4ce4318a>
+# Programming: Andreas Ulrich
+#              <ulrich3110@gmail.com>,
+#              <http://erasand.jimdo.com/kontakt/>
+#
+# This file is part of the "MindfulClock".
+# "MindfulClock" is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of
+# the License, or (at your option) any later version.
+#
+# "MindfulClock" is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# See the GNU General Public License for more details. You should
+# have received a copy of the GNU General Public License along with
+# "MindfulClock".  If not, see <http://www.gnu.org/licenses/>.
+
+
+import sys
+import wx
+
+
+'''The start command for the sourcecode distribution.
+   mfc1dist [OPTIONS]
+     --start-minim: Start minimized in the Taskbar Notification.
+     --tb-icon: Use the classic Taskbar.
+     --dist: Start the source distribution.
+     --help: Show help.
+
+'''
+
+
+if __name__ == '__main__':
+    # Command line options
+    clio = sys.argv
+    # Check start in Taskbar Notification Area.
+    if '--start-tna' in clio:
+        mini = True
+    else:
+        mini = False
+    # Check classic Taskbar.
+    if '--taskbar' in clio:
+        tbico = True
+    else:
+        tbico = False
+    # Check help.
+    if '--help' in clio:
+        print('')
+        print('MindfulClock 1.0')
+        print('Commando: mindfulclock1 [OPTIONS]')
+        print('')
+        print('  --start-tna    Start the clock minimized in')
+        print('                 the Taskbar Notification Area.')
+        print('')
+        print('  --taskbar      Use the classic taskbar,')
+        print('                 instead of the application indicator.')
+        print('')
+        print('  --help         Show this help.')
+        print('')
+    else:
+        # Start, append the directory of the debian package.
+        sys.path.append('/usr/share/mfc')
+        try:
+            # Import mfc1
+            import mfc1
+            # Run GUI
+            app = wx.App()
+            frame = mfc1.GUI(tna=mini, tbicon=tbico)
+            app.MainLoop()
+        except ImportError:
+            print('')
+            print('The start of MindfulClock failed,')
+            print('the package <mfc1> could not be found.')
+            print('')
