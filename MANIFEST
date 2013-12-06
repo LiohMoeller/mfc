@@ -5,7 +5,7 @@ setup.py
 mfc1/__init__.py
 mfc1/data.py
 mfc1/gui.py
-mfc1/msg.py
+mfc1/lock.py
 mfc1/popup.py
 mfc1/taskbaricon.py
 mfc1/unitest.py
@@ -19,6 +19,7 @@ mfc1/icons/mindfulclock_22.png
 mfc1/icons/16/go-down.png
 mfc1/icons/16/list-add.png
 mfc1/icons/16/list-remove.png
+mfc1/icons/16/media-playback-pause.png
 mfc1/icons/16/media-playback-start.png
 mfc1/icons/16/media-playback-stop.png
 mfc1/icons/16/process-stop.png
@@ -28,6 +29,7 @@ mfc1/icons/16/weather-clear.png
 mfc1/icons/22/go-down.png
 mfc1/icons/22/list-add.png
 mfc1/icons/22/list-remove.png
+mfc1/icons/22/media-playback-pause.png
 mfc1/icons/22/media-playback-start.png
 mfc1/icons/22/media-playback-stop.png
 mfc1/icons/22/process-stop.png
@@ -37,6 +39,7 @@ mfc1/icons/22/weather-clear.png
 mfc1/icons/32/go-down.png
 mfc1/icons/32/list-add.png
 mfc1/icons/32/list-remove.png
+mfc1/icons/32/media-playback-pause.png
 mfc1/icons/32/media-playback-start.png
 mfc1/icons/32/media-playback-stop.png
 mfc1/icons/32/process-stop.png

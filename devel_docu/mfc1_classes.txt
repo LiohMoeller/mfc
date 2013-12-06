@@ -1,0 +1,14 @@
+mindfulclock1
+'--mfc1.GUI
+   |--mfc1.AppIndicator
+   |--mfc1.Data
+   |--mfc1.Lock
+   '--mfc1.Popup
+
+mindfulclock --taskbar
+'--mfc1.GUI
+   |--mfc1.Data
+   |--mfc1.Lock
+   |--mfc1.Popup
+   '--mfc1.TBIcon
+

@@ -18,14 +18,19 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
 - Run the .deb, the package <mfc1> will be installed.
 - You can start the clock with the menu entry, or with the command:
   <mindfulclock1 [OPTIONS]>
-    --start-tna   Start the clock minimized in
-                  the Taskbar Notification Area.
-    --taskbar     Use the classic taskbar,
-                  instead of the application indicator.
-    --help        Show a little help.
+    --start-tna         Start the clock minimized in
+                        the Taskbar Notification Area.
+    --autostart-clock   Start the clock automatically.
+    --taskbar           Use the classic taskbar, instead
+                        of the application indicator.
+    --menu-time         Show the time not beside the
+                        taskbar indicator icon.
+                        (With --taskbar, this option
+                         will be ignored.)
+    --help              Show a little help.
 
 
-TRUBBLESHOTTING
+TROUBBLESHOTTING
 - Reset all setting: Delete the configuarion, the hidden file <.mfc1>
   in the home directory.
 
@@ -57,11 +62,16 @@ INSTALLATION THE SOURCECODE DISTRIBUTION
 - Python installs the source distribution.
 - the program starts with the command:
   <mindfulclock1 [OPTIONS]>
-    --start-tna   Start the clock minimized in
-                  the Taskbar Notification Area.
-    --taskbar     Use the classic taskbar,
-                  instead of the application indicator.
-    --help        Show a little help.
+    --start-tna         Start the clock minimized in
+                        the Taskbar Notification Area.
+    --autostart-clock   Start the clock automatically.
+    --taskbar           Use the classic taskbar, instead
+                        of the application indicator.
+    --menu-time         Show the time not beside the
+                        taskbar indicator icon.
+                        (With --taskbar, this option
+                         will be ignored.)
+    --help              Show a little help.
 - For a program starter icons are placed in </mfc1/icons> in the
   repisotory.
 - If application indicator icon is not displayed, please copy the file
@@ -80,14 +90,19 @@ REMOVE THE SOURCECODE DISTRIBUTION
 RELEASE NOTES 1.0
 - Notification with text or sound.
 - Specification by user: Time interval in minutes, text notification,
-  sound notification.
+  sound notification, pause function.
+- Full clock control in the user interface.
+- Taskbar application.
+- Ubuntu integration with the Application indicator.
 - Art work and sound theme.
-- Sourcecode installation.
 - Debian package.
-- Internationalisation with pygettext.
-- System-tray application.
-- Ubuntu Unity integration wiht the Application indicator.
 - Command line options
+- Sourcecode installation.
+- Internationalisation with pygettext.
+
+
+DOCUMENTATION
+- start the file /doxygen-docu/html/index.html of this repository.
 
 
 GERMAN TRANSLATIONS
@@ -138,4 +153,4 @@ SOUND WORK
   <pv-bell.ogg> by Marcus Möller
 
 
-30.11.2013 / Andreas Ulrich, Marcus Möller
+06.12.2013 / Andreas Ulrich, Marcus Möller

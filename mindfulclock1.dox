@@ -1,0 +1,15 @@
+/*! \mainpage MindfulClock
+ *
+ * mindfulclock1
+ *
+ * The start command for the sourcecode distribution.
+ *
+ * mindfulclock1 [OPTIONS]\n
+ *
+ * --start-tna: Start minimized in the Taskbar Notification.\n
+ * --autostart-clock: Start the clock automatically\n
+ * --menu-time: Show the time not beside the taskbar indicator icon.\n
+ * --taskbar: Use the classic Taskbar.\n
+ * --help: Show help.
+ */
+

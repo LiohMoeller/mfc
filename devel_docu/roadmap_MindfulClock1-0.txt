@@ -1,0 +1,29 @@
+AUSGANGSLAGE
+- MindfulClock 1.0 vom 06.12.2013
+- Debian Paket mfc1 1.0-4 gilt als eine Alpha Version.
+
+ZIEL
+- Erreichung einer finalen Version zur Veröffentlichung.
+
+ENTWICKLUNGSSCHRITTE
+- Alpha: Debian Paket mfc1 1.0-4
+  > 06.12.2013 Andreas Ulrich
+- Beta: Voraussichtlich Debian Paket mfc1 1.0-5
+  > ..
+- RC: Voraussichtlich Debian Paket mfc1 1.0-6
+  > ..
+- Final: Voraussichtlich Debian Paket mfc1 1.0-7
+  > ..
+- Veröffentlichung der Final Version als Debian Paket
+  oder Source Distribution.
+
+- Von der Alpha zur Beta sind konzeptionelle Änderungen möglich.
+- Von Beta zu RC werden nur noch Fehler korrigiert.
+- Bei RC zu Final gibt es den letzten Schliff.
+
+DOKUMENTATION
+- Quellcode: Docstrings und Bemerkungen.
+- Strukturen und Abhängigkeiten in separaten Text Datein.
+- Ab Beta eine automatisch generierte Html Dokumentation
+  anhand der Docstrings.
+
