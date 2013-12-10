@@ -8,11 +8,13 @@ ZIEL
 ENTWICKLUNGSSCHRITTE
 - Alpha: Debian Paket mfc1 1.0-4
   > 06.12.2013 Andreas Ulrich
-- Beta: Voraussichtlich Debian Paket mfc1 1.0-5
+- Alpha: Debian Paket mfc1 1.0-5
+  > 10.12.2013 Andreas Ulrich
+- Beta: Voraussichtlich Debian Paket mfc1 1.0-6
   > ..
-- RC: Voraussichtlich Debian Paket mfc1 1.0-6
+- RC: Voraussichtlich Debian Paket mfc1 1.0-7
   > ..
-- Final: Voraussichtlich Debian Paket mfc1 1.0-7
+- Final: Voraussichtlich Debian Paket mfc1 1.0-8
   > ..
 - Veröffentlichung der Final Version als Debian Paket
   oder Source Distribution.
@@ -27,3 +29,4 @@ DOKUMENTATION
 - Ab Beta eine automatisch generierte Html Dokumentation
   anhand der Docstrings.
 
+10.12.2013, Andreas Ulrich

@@ -16,8 +16,7 @@
       |     |  |  '--*.png
       |     |  |--32
       |     |  |  '--*.png
-      |     |  |--*.png
-      |     |  '--*.svg
+      |     |  '--*.png
       |     |--locale
       |     |  'de
       |     |   '--LC_MESSAGES
@@ -32,3 +31,4 @@
       '--pixmaps
          '--*.png
 
+10.12.2013, Andreas Ulrich

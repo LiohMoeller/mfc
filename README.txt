@@ -7,8 +7,23 @@ opportunity to pause, and enjoy the present moment in mindfulness.
 
 OPERATING SYSTEM
 - The MindfulClock is programmed in Python wiht the GUI toolkit
-  wxPython. It runs on all platforms which support python and wxpython.
-- Its specially designed for Ubuntu with the Unity desktop.
+  wxPython. It runs on all platforms which support python and
+  wxpython.
+- Its specially designed for Ubuntu.
+
+
+RELEASE NOTES 1.0
+- Notification with text or sound.
+- Specification by user: Time interval in minutes, text notification,
+  sound notification, pause function.
+- Full clock control in the user interface.
+- Taskbar application.
+- Ubuntu integration with the Application indicator.
+- Art work and sound theme.
+- Debian package.
+- Command line options
+- Sourcecode installation.
+- Internationalisation with pygettext.
 
 
 DOWNLAD AND INSTALL DEBIAN PACKAGE
@@ -87,20 +102,6 @@ REMOVE THE SOURCECODE DISTRIBUTION
   file </usr/local/bin/mfc1dist>
 
 
-RELEASE NOTES 1.0
-- Notification with text or sound.
-- Specification by user: Time interval in minutes, text notification,
-  sound notification, pause function.
-- Full clock control in the user interface.
-- Taskbar application.
-- Ubuntu integration with the Application indicator.
-- Art work and sound theme.
-- Debian package.
-- Command line options
-- Sourcecode installation.
-- Internationalisation with pygettext.
-
-
 DOCUMENTATION
 - start the file /doxygen-docu/html/index.html of this repository.
 
@@ -153,4 +154,4 @@ SOUND WORK
   <pv-bell.ogg> by Marcus Möller
 
 
-06.12.2013 / Andreas Ulrich, Marcus Möller
+10.12.2013 / Andreas Ulrich, Marcus Möller

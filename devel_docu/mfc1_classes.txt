@@ -12,3 +12,4 @@ mindfulclock --taskbar
    |--mfc1.Popup
    '--mfc1.TBIcon
 
+10.12.2013, Andreas Ulrich
