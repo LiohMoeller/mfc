@@ -13,23 +13,23 @@ Build-Depends: debhelper (>= 8.0.0)
 Package-List: 
  mfc1 deb misc option
 Checksums-Sha1: 
- 3d6dd1f73d3d95c27adf7606c6d3143c76f53444 481548 mfc1_1.0.orig.tar.gz
- e5d5435bf6a8433d02fc110cadb19d658d9b5392 1454 mfc1_1.0-5.diff.gz
+ 1558ba783037907d564fddf900485c437cf18496 481564 mfc1_1.0.orig.tar.gz
+ 7305645c15804c8acf0b978583d1efbc6313b36d 1455 mfc1_1.0-5.diff.gz
 Checksums-Sha256: 
- f18878a09d52884cac17277f073a73a42819df3c35f35715fdb146a76567d69f 481548 mfc1_1.0.orig.tar.gz
- ea6fb24267ff9fa1d9d0c5df3ac636251a1e9c43bdf97733b217e43bd623a11d 1454 mfc1_1.0-5.diff.gz
+ cb3f553bb3f2df4ba8df9799c27506b0ce879b9fe611cb6930e65adb95631755 481564 mfc1_1.0.orig.tar.gz
+ 4c379db0e3f9a581dc69fb2261ce46bab6e4a0ed4432a47d930f4a95ff0eacac 1455 mfc1_1.0-5.diff.gz
 Files: 
- 5151ae1a1df392ff8cb6bca6a998ad39 481548 mfc1_1.0.orig.tar.gz
- ae4a21a3138ca295fa04f2101ed8643a 1454 mfc1_1.0-5.diff.gz
+ c5e1780f5ababf362d3d093bf4f899ba 481564 mfc1_1.0.orig.tar.gz
+ 9256eb34fd881907e846a136bac99c08 1455 mfc1_1.0-5.diff.gz
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJSp3EKAAoJEEcIVR9bGKk/gSMIAI+uIjkWogUd5MrVuWLNyln+
-H4EU/wYOYc1Gt+jPOWcX65d7rv/xn/imTalI8bGhgu9huPgYoxLYZ91KsovY+fx3
-ptQ5JQnHK+kVHnWmrH7W/xL/lWNZUN/vlhZ//WXSgdnqVF/VvQteIa9kzRhfDvTT
-5sKq4sXPbgDeMR3HE2yw4bNqJ70dL63m2I7vwm89yMt/sQgJsCTeS0lTFLuWYIaK
-eMSMF/5zRDIKYMP5CY+ubSldUjgJywx5lL+ltES2AA2TiMOIZMxBBxesYXOGZeVq
-Jn8pHVK6NO+I2cAZyUjfHZhFPKVGAzRmM+B81gXR/kE5IBOSdsCP8J/s3KB0LAU=
-=w7xn
+iQEcBAEBAgAGBQJSp3b2AAoJEEcIVR9bGKk/JHkH/1aepcoGGzA8SodlWWEreE3J
+sAwydkNNMRu4Hov07s+s8LP4UEDREw+FfgYW+fprY2eBu7T++PWIXgRilnz4QT1i
+j3dcX2pSGVRzpHp0X1RWgS5YHUfG6kmYc1z18xJPpgLFrVh4xz6t8Uye/ehCY750
+lMe9YOCCzmaQzPiLsm91Jlal6eUfZc0Y49MiZ1iQ/f4Z6lioRZhR9S/41CzfcfaN
+ImLyhMGPL2mmebGh6CQca31YeZ1xtOyFONhzxBnjTSFfIEZCGw3BbCH3MGDR/tXX
+2IhgfrAt32GAv+3h1n8ooA139VWqkpNV+pGXSY79FD6KWPL8L0ts8trMg/yN+cQ=
+=8Wzu
 -----END PGP SIGNATURE-----

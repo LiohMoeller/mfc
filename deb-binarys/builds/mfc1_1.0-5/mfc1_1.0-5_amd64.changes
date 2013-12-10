@@ -2,7 +2,7 @@
 Hash: SHA1
 
 Format: 1.8
-Date: Tue, 10 Dec 2013 20:49:52 +0100
+Date: Tue, 10 Dec 2013 21:14:28 +0100
 Source: mfc1
 Binary: mfc1
 Architecture: source all
@@ -18,29 +18,29 @@ Changes:
  .
    * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 Checksums-Sha1: 
- 6c0ee3b4bd4b095fad97774bc3aa958404a2bf34 1285 mfc1_1.0-5.dsc
- 3d6dd1f73d3d95c27adf7606c6d3143c76f53444 481548 mfc1_1.0.orig.tar.gz
- e5d5435bf6a8433d02fc110cadb19d658d9b5392 1454 mfc1_1.0-5.diff.gz
- 49be5341feddbfe74f75b5d281701f1e8db4c32f 482932 mfc1_1.0-5_all.deb
+ 6e2d36df98b311b8c96ab9e84c87bbc6cd9107a2 1285 mfc1_1.0-5.dsc
+ 1558ba783037907d564fddf900485c437cf18496 481564 mfc1_1.0.orig.tar.gz
+ 7305645c15804c8acf0b978583d1efbc6313b36d 1455 mfc1_1.0-5.diff.gz
+ f1bc89d5c18ab993c83024b157046c653e7409b3 482956 mfc1_1.0-5_all.deb
 Checksums-Sha256: 
- 45a055b16378c43e057b88710aaadb9fb5cdaf072907acbdbf6a576b38dfa6d8 1285 mfc1_1.0-5.dsc
- f18878a09d52884cac17277f073a73a42819df3c35f35715fdb146a76567d69f 481548 mfc1_1.0.orig.tar.gz
- ea6fb24267ff9fa1d9d0c5df3ac636251a1e9c43bdf97733b217e43bd623a11d 1454 mfc1_1.0-5.diff.gz
- 45dbcae64cea6ed93dcca9146441ce9eb25350e4fc8f8f11565bddb4333dc8e1 482932 mfc1_1.0-5_all.deb
+ 46076d6ba8dbf582955d6d14512cb8aa9b92524b7a34db2150b1c0b153ab9848 1285 mfc1_1.0-5.dsc
+ cb3f553bb3f2df4ba8df9799c27506b0ce879b9fe611cb6930e65adb95631755 481564 mfc1_1.0.orig.tar.gz
+ 4c379db0e3f9a581dc69fb2261ce46bab6e4a0ed4432a47d930f4a95ff0eacac 1455 mfc1_1.0-5.diff.gz
+ 04f67e7ec1421f7ebff23f4b135ba0e28c54ce0429a7667ded2c2d2f2691631a 482956 mfc1_1.0-5_all.deb
 Files: 
- 22bcf5222099bc6ca8d89f73dcd7dafc 1285 misc option mfc1_1.0-5.dsc
- 5151ae1a1df392ff8cb6bca6a998ad39 481548 misc option mfc1_1.0.orig.tar.gz
- ae4a21a3138ca295fa04f2101ed8643a 1454 misc option mfc1_1.0-5.diff.gz
- 574ce6ecb3dbc9a8a96c05b07b21ca09 482932 misc option mfc1_1.0-5_all.deb
+ ab8257f029f24c1c541d4744862a58ed 1285 misc option mfc1_1.0-5.dsc
+ c5e1780f5ababf362d3d093bf4f899ba 481564 misc option mfc1_1.0.orig.tar.gz
+ 9256eb34fd881907e846a136bac99c08 1455 misc option mfc1_1.0-5.diff.gz
+ 3016e489d421fe5ba3fcfc334fde36bd 482956 misc option mfc1_1.0-5_all.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJSp3EiAAoJEEcIVR9bGKk/064H/274LLxN/2x2JeqJIED5nTtV
-IewLfw31w9UB2WH31+yJhH2SdOxW2PFUmW3rZTgq6cAWuPMEheaIrkd/bmzdfH/L
-mRMnk/3C8DeBo4vZoeXi6+vFNy6F0oNDXoZZ7zYTu/ishDt2jSU1mc0QVE4bjaQl
-WG+H3yk3aTMstisa8NclNQ7qq4IQ2ucuOe9TX2q5FLODw3L8q/PJriv8eXgkzHns
-u+C4FmuvWQ15WJQ8fugs+LWaBi0z+YYZUHbNCoYPloSpPgOpRSxg0VDe4I1zBoLG
-YxOtUcq/GaXzWyLvm+2CgOcU69L6ef8IpO6YUDpLKS77H5lraN0+Ea1j72j1whs=
-=Vj+U
+iQEcBAEBAgAGBQJSp3b2AAoJEEcIVR9bGKk//CMIAJa3F/9W6nleDv0xgblLd8J+
+gByiYWZkt8GdJe25qwP5msn8Q3MSF1NjPguuMphW3Kxbt+CB7xd1h3zdI4TbZEce
+/mbokyQq104Hoy2eYKK82DCL4yk+yqlYRoY+Puvn4oC3T10T/2tPb7DMAv823jHN
+PKan4aCI1MgwMMCjIBnHphncHYwexF3JK3yYC2/eVBq3dhmEfCRjXdnEKGYc3+Em
+1PJAs78/vU/MxYrk0EFSjPUffpCMuCQhhadvWPbOXdU+kRC2sKvrcTTUxtSAV9JD
+d0JRcpEfLfisQm4pyB8fANbjWSn2GtccWUcUGni83S+Wuqme2QPRgO98OapPDQo=
+=/vV/
 -----END PGP SIGNATURE-----

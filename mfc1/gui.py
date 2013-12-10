@@ -818,6 +818,10 @@ class GUI(wx.Frame):
                 pygame.mixer.music.load(self.__sound)
                 pygame.mixer.music.play()
                 self.__soundplay = 'play-music'
+        else:
+            # No sound, set __soundplay 'close'.
+            self.__soundplay = 'close'
+
 
     def set_integer_interval(self, interval):
         '''Control value of time interval and set it to the entry.'''

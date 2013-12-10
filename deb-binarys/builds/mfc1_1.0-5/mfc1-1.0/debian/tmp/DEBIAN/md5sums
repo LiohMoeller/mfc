@@ -1,12 +1,12 @@
 547600d96212532a0a1cdec5fbd878d4  usr/bin/mindfulclock1
 eb7e861a8d78a5f8a04a280701787a3a  usr/share/applications/mindfulclock.desktop
-75833ab2ba1d98025bb9587b07017f3b  usr/share/doc/mfc1/changelog.Debian.gz
+1d18e028d9b3ee2d9c853f4333f68470  usr/share/doc/mfc1/changelog.Debian.gz
 89f3c2f48774f47f447464670d87d95e  usr/share/doc/mfc1/copyright
 1b892eb9020074eac2301173d3f29a0b  usr/share/mfc/mfc1/__init__.py
 94e54bd0b0fe336e9516fd75325d70eb  usr/share/mfc/mfc1/data.py
 bd82b3a466b17b1810e2a783fe730beb  usr/share/mfc/mfc1/doku/gpl-3-0_de.html
 f25b6d1ff8b35795598dcecad2e0e141  usr/share/mfc/mfc1/doku/gpl-3-0_en.html
-1c5a615d19f1e5aaeb922c7359dec666  usr/share/mfc/mfc1/gui.py
+96e47dd9c3796c13c42d7efcb4d226ef  usr/share/mfc/mfc1/gui.py
 01fa0d3883e00b914cc36bc8bf0b2b98  usr/share/mfc/mfc1/icons/16/go-down.png
 c8e042c266f5518858234831d2337318  usr/share/mfc/mfc1/icons/16/list-add.png
 d124bbc6f037d0e18713d96aa28f9351  usr/share/mfc/mfc1/icons/16/list-remove.png
