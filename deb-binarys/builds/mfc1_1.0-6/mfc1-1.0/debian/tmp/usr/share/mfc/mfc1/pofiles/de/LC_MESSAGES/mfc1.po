@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MindfulClock 1.0\n"
+"POT-Creation-Date: 2013-12-10 20:44+CET\n"
+"PO-Revision-Date: 2013-12-06 20:24+0100\n"
+"Last-Translator: Andreas Ulrich <ulrich3110@gmail.com>\n"
+"Language-Team: erasand <ulrich3110@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: SWITZERLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: gui.py:395 gui.py:602
+msgid "Start"
+msgstr "Start"
+
+#: gui.py:396 gui.py:603
+msgid "Stop"
+msgstr "Stop"
+
+#: gui.py:397 gui.py:604
+msgid "Show"
+msgstr "Zeigen"
+
+#: gui.py:398 gui.py:605
+msgid "Hide"
+msgstr "Ausblenden"
+
+#: gui.py:399 gui.py:606
+msgid "Exit"
+msgstr "Beenden"
+
+#: gui.py:400 gui.py:607
+msgid "Pause"
+msgstr "Pause"
+
+#: gui.py:401 gui.py:608
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: gui.py:411
+msgid "Clock control"
+msgstr "Uhr Kontrolle"
+
+#: gui.py:418
+msgid "Start Clock"
+msgstr "Starte Uhr"
+
+#: gui.py:424
+msgid "Clock stop"
+msgstr "Stoppe Uhr"
+
+#: gui.py:430
+msgid "Clock pause"
+msgstr "Pausiere Uhr"
+
+#: gui.py:436
+msgid "Minimize to Taskbar Notification Area"
+msgstr "Zum Benachrichtigungsfeld minimieren"
+
+#: gui.py:443
+msgid "Exit Clock"
+msgstr "Beende Uhr"
+
+#: gui.py:449
+msgid "Start in the Taskbar Notification Area"
+msgstr "Im Benachrichtigungsfeld starten"
+
+#: gui.py:452
+msgid "Automatically start the clock on program startup"
+msgstr "Uhr automatisch beim Programmstart starten"
+
+#: gui.py:507
+msgid "Time interval in minutes"
+msgstr "Zeit Intervall in Minuten"
+
+#: gui.py:517
+msgid "Increase time"
+msgstr "Erhöhe Zeit"
+
+#: gui.py:523
+msgid "Decrease time"
+msgstr "Verringere Zeit"
+
+#: gui.py:551
+msgid "Sound notification"
+msgstr "Klang Benachrichtigung"
+
+#: gui.py:558
+msgid "Change sound file"
+msgstr "Wähle Audio Datei"
+
+#: gui.py:564
+msgid "Preview sound"
+msgstr "Musik Vorschau"
+
+#: gui.py:616
+msgid "Text notification"
+msgstr "Text Benachrichtigung"
+
+#: gui.py:639
+msgid "file"
+msgstr "Datei"
+
+#: gui.py:644
+msgid "Select the sound file"
+msgstr "Wähle die Audio Datei"
+
+#: gui.py:838
+msgid "It seems the MindfulClock is running."
+msgstr "Es scheint, dass die MindfulClock bereits läuft."
+
+#: gui.py:839
+msgid "Do you want to start the clock anyway?"
+msgstr "Möchten Sie die Uhr trotzdem starten?"
+
+#: gui.py:843
+msgid "Start control"
+msgstr "Start Kontrolle"
+
+#~ msgid "Stop Clock"
+#~ msgstr "Stop Uhr"
+
+#~ msgid "Start the clock automatically"
+#~ msgstr "Uhr automatisch starten"
+
+#~ msgid "Minimize Clock"
+#~ msgstr "Minimiere Uhr"
+
+#~ msgid "Start minimized"
+#~ msgstr "Minimiert starten"

@@ -1,0 +1,5 @@
+mfc1 (1.0-6) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Andreas Ulrich <ulrich3110@gmail.com>  Sat, 14 Dec 2013 19:14:00 +0100

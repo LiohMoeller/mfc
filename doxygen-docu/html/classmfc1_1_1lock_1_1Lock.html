@@ -110,7 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0402cd95914fc7145483b60118020190"></a><!-- doxytag: member="mfc1::lock::Lock::__init__" ref="a0402cd95914fc7145483b60118020190" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfc1_1_1lock_1_1Lock.html#a4cd055b2c38e46af6fab4859ee01382b">delete_lock</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfc1_1_1lock_1_1Lock.html#ac5fa55931173d0654c18e04717491ef5">get_pid</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfc1_1_1lock_1_1Lock.html#a9cea66013682c70d8202eb53d0d45d8e">is_lock</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfc1_1_1lock_1_1Lock.html#a9b59c6216010d9f95776a3dda62e7c7b">one_instance</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmfc1_1_1lock_1_1Lock.html#acbd4d327e559cd486d5c39fa95d61cee">write_lock</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -136,6 +138,33 @@ Lock object of the MindfulClock.
 <div class="fragment"><pre class="fragment">Delete the lock, return True or False.</pre></div> 
 </div>
 </div>
+<a class="anchor" id="ac5fa55931173d0654c18e04717491ef5"></a><!-- doxytag: member="mfc1::lock::Lock::get_pid" ref="ac5fa55931173d0654c18e04717491ef5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmfc1_1_1lock_1_1Lock.html#ac5fa55931173d0654c18e04717491ef5">mfc1.lock.Lock.get_pid</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>pidname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<div class="fragment"><pre class="fragment">Check the linux, unix, PID, integer.</pre></div> 
+</div>
+</div>
 <a class="anchor" id="a9cea66013682c70d8202eb53d0d45d8e"></a><!-- doxytag: member="mfc1::lock::Lock::is_lock" ref="a9cea66013682c70d8202eb53d0d45d8e" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -151,6 +180,33 @@ Lock object of the MindfulClock.
 </div>
 <div class="memdoc">
 <div class="fragment"><pre class="fragment">Check the lock, return True or False.</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a9b59c6216010d9f95776a3dda62e7c7b"></a><!-- doxytag: member="mfc1::lock::Lock::one_instance" ref="a9b59c6216010d9f95776a3dda62e7c7b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmfc1_1_1lock_1_1Lock.html#a9b59c6216010d9f95776a3dda62e7c7b">mfc1.lock.Lock.one_instance</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>scriptname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<div class="fragment"><pre class="fragment">Check one instance running with lock &amp; PID.</pre></div> 
 </div>
 </div>
 <a class="anchor" id="acbd4d327e559cd486d5c39fa95d61cee"></a><!-- doxytag: member="mfc1::lock::Lock::write_lock" ref="acbd4d327e559cd486d5c39fa95d61cee" args="" -->
@@ -191,7 +247,7 @@ Lock object of the MindfulClock.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 6 2013 21:02:43 for MindfulClock by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 14 2013 19:09:58 for MindfulClock by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
