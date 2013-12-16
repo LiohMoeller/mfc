@@ -12,9 +12,11 @@ ENTWICKLUNGSSCHRITTE
   > 10.12.2013 Andreas Ulrich
 - Beta: Debian Paket mfc1 1.0-6
   > 14.12.2013 Andreas Ulirch
-- RC: Voraussichtlich Debian Paket mfc1 1.0-7
+- Beta: Debian Paket mfc1 1.0-7
+  > 16.12.2013 Andreas Ulirch
+- RC: Voraussichtlich Debian Paket mfc1 1.0-8
   > ..
-- Final: Voraussichtlich Debian Paket mfc1 1.0-8
+- Final: Voraussichtlich Debian Paket mfc1 1.0-9
   > ..
 - Veröffentlichung der Final Version als Debian Paket
   oder Source Distribution.
@@ -25,8 +27,8 @@ ENTWICKLUNGSSCHRITTE
 
 DOKUMENTATION
 - Quellcode: Docstrings und Bemerkungen.
-- Strukturen und Abhängigkeiten in separaten Text Datein.
-- Ab Beta eine automatisch generierte Html Dokumentation
+- Strukturen und Abhängigkeiten in separaten Text Dateien.
+- Ab Beta eine automatisch generierte HTML Dokumentation
   anhand der Docstrings.
 
-14.12.2013, Andreas Ulrich
+16.12.2013, Andreas Ulrich
