@@ -21,7 +21,7 @@ echo "Press [enter] to continue, [ctrl]-[c] to cancel."
 read Taste
 sudo rm /usr/local/bin/mindfulclock1
 
-# delete file /usr/local/bin/mfc1dist
+# delete file ~/.mfc?
 echo " "
 echo "Delete file ~/.mfc?"
 echo "Press [enter] to continue, [ctrl]-[c] to cancel."

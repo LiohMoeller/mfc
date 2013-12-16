@@ -1,0 +1,46 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Mon, 16 Dec 2013 19:26:04 +0100
+Source: mfc1
+Binary: mfc1
+Architecture: source all
+Version: 1.0-7
+Distribution: unstable
+Urgency: low
+Maintainer: Andreas Ulrich <ulrich3110@gmail.com>
+Changed-By: Andreas Ulrich <ulrich3110@gmail.com>
+Description: 
+ mfc1       - MindfulClock, turn your device into a Bell of Mindfulness.
+Changes: 
+ mfc1 (1.0-7) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1: 
+ 2384b95bd895af71fd6e0f5dc60ca10fa43dd222 1285 mfc1_1.0-7.dsc
+ e233a0251b3b748e85bd0ed2a75b5e0ea28164ae 481555 mfc1_1.0.orig.tar.gz
+ e34c8d65aa5c80f9a5745820216531a86ab5f8f0 1455 mfc1_1.0-7.diff.gz
+ 2a33e271891323563aff650b924bc9eac8fb5b40 482876 mfc1_1.0-7_all.deb
+Checksums-Sha256: 
+ bfc1198ee8bb61368323f29cd019d3a68d813a80e8ebde70ede4efb1e0353028 1285 mfc1_1.0-7.dsc
+ 32e14bbc568353b74b2b20fa8d3d0a285a4fcc6d53cfe6d67a924847f32f8af6 481555 mfc1_1.0.orig.tar.gz
+ 92a3e0f56b696e3dc6beeeae3844f5b9d3bbbc2387a9295f9795790ce9112532 1455 mfc1_1.0-7.diff.gz
+ 9300c688b050737f8e362b441a90f858d67be7224b3e3305cc4555651aacbc46 482876 mfc1_1.0-7_all.deb
+Files: 
+ dfceb5b46136f5f4cf183a1cf5531a8f 1285 misc option mfc1_1.0-7.dsc
+ 5b65a1abc8f44326b1c616bbbc5add53 481555 misc option mfc1_1.0.orig.tar.gz
+ 928b77865999fbdef405b2fd1101accd 1455 misc option mfc1_1.0-7.diff.gz
+ 3df1ded39662864c75638671dacfe956 482876 misc option mfc1_1.0-7_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSr0Z5AAoJEEcIVR9bGKk/JlIIAMq9SWpbN/TYRYzgGeZIj/OF
+lZ+yGgwiDpprpXvRX1sdJCUpdB17PkyJkneVppxeNcq8083Q8uWqJioHU7ifTKxH
+pxbTX/gvVtXVmiU2yadI1RpZwHcgY4lqy4hN+KvjcIGfScReMkjQ2al4LOk9F5VP
+iWKqMpW1qGhzAEZ+B5fGg7rI8HS7ZEDm8FLSbJhIVMBOW8Aw+9WX+Hrtsna94tBz
+18M8xEkVBkRq5xblbOjS1Rw17qA6pW5z2wmoaL201vBCL1sDlO0UqxI4Adiu8fES
+QCp3uk7sgV/uxOzFT7nBbI/VmUgyOorkJ/kLDltD5ycUsLmMww393jgYIqv8n+c=
+=tE7L
+-----END PGP SIGNATURE-----
