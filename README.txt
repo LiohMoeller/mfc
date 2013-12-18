@@ -135,23 +135,22 @@ GERMAN TRANSLATIONS
 
 CONCEPT, DESIGN
   Marcus Möller
-  <marcus.moeller@outlook.com>
-  <http://apps.microsoft.com/windows/de-de/app/mindfulclock/58063160-9cc6-4dee-9d92-17df4ce4318a>
+  <marcus.moeller[AT]ubuntu[DOT]com>
 
 
 PROGRAM CODE
   Andreas Ulrich
   <http://erasand.jimdo.com/kontakt/>
-  <ulrich3110@gmail.com>
+  <ulrich3110[AT]gmail[DOT]com>
 
 
-ART WORK
+ARTWORK
   Marcus Möller (program icon)
   The Tango Project (button icons)
 
 
-SOUND WORK
-  <pv-bell.ogg> by Marcus Möller
+SOUND 
+  <pv-bell.ogg> by Marcus Möller and the WakeUp community
 
 
 16.12.2013 / Andreas Ulrich, Marcus Möller
