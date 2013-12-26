@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="MindfulClock : With the MindfulClock you turn your device into a Bell of Mindfulness." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MindfulClock</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ulrich3110/mfc">View on GitHub</a>
+
+          <h1 id="project_title">MindfulClock</h1>
+          <h2 id="project_tagline">With the MindfulClock you turn your device into a Bell of Mindfulness.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ulrich3110/mfc/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ulrich3110/mfc/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>MindfulClock 1.0</p>
+
+<p>With the MindfulClock you turn your device into a Bell of Mindfulness.
+During the day, it will periodically invite the bell and gives you the
+opportunity to pause, and enjoy the present moment in mindfulness.</p>
+
+<p>OPERATING SYSTEM</p>
+
+<ul>
+<li>The MindfulClock is programmed in Python with the GUI toolkit
+wxPython. It runs on all platforms which support Python and
+wxpython.</li>
+<li>It's specially designed for Ubuntu.</li>
+</ul><p>RELEASE NOTES 1.0</p>
+
+<ul>
+<li>Notification with text or sound.</li>
+<li>Specification by user: Time interval in minutes, text notification,
+sound notification, pause function.</li>
+<li>Full clock control in the user interface.</li>
+<li>Taskbar application.</li>
+<li>Ubuntu integration with the Application indicator.</li>
+<li>Artwork and sound theme.</li>
+<li>Debian package.</li>
+<li>Command line options</li>
+<li>Sourcecode installation.</li>
+<li>Internationalisation with pygettext.</li>
+</ul><p>DOWNLAD AND INSTALL DEBIAN PACKAGE</p>
+
+<ul>
+<li>Download the project archive</li>
+<li>Extract the archive to a temporary folder</li>
+<li>Open the  directory</li>
+<li>Run the .deb, the package  will be installed.</li>
+<li>You can start the clock with the menu entry, or with the command:
+
+  --start-tna         Start the clock minimized in
+                      the Taskbar Notification Area.
+  --autostart-clock   Start the clock automatically.
+  --taskbar           Use the classic taskbar, instead
+                      of the application indicator.
+  --menu-time         Show the time not beside the
+                      taskbar indicator icon.
+                      (With --taskbar, this option
+                       will be ignored.)
+  --help              Show a little help.</li>
+</ul><p>USAGE
+MindfulClock offers several options. You can define the time interval,
+a text message that supports your practise and a bell sound. You can
+also disable either the text or the sound notification by clearing the
+relevant input box. All changes will be applied on the next startup of
+the clock (or by pressing the stop button and the start button again).</p>
+
+<p>The application brings an indicator applet which you will find in the
+upper right corner of your Ubuntu Unity desktop. If you are not using
+Unity, you could also start the application with the --start-tna 
+parameter, which will make use of the traditional systray instead.</p>
+
+<p>From the indicator icon, you can start, stop or pause the clock and
+open the main application window.</p>
+
+<p>MindfulClock can by configured to automatically start the clock on
+application startup and to start directly to the indicator applet.</p>
+
+<p>The main window can always be minimized to the applet by pressing the
+minimize button. Using the exit button will close the application.</p>
+
+<p>TROUBBLESHOTTING</p>
+
+<ul>
+<li>Reset all setting: Delete the configuarion, the hidden file &lt;.mfc1&gt;
+in the home directory.</li>
+</ul><p>REMOVE THE DEBIAN PACKAGE</p>
+
+<ul>
+<li>Remove the package  from your system.</li>
+</ul><p>REMOVE THE SETTINGS</p>
+
+<ul>
+<li>If the settings are to be removed: Delete the hidden file &lt;.mfc1&gt;
+in the home directory.</li>
+</ul><p>DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB</p>
+
+<ul>
+<li>Download the project archive</li>
+<li>Extract the archive to a temporary folder</li>
+<li>Open the  directory</li>
+</ul><p>INSTALLATION THE SOURCECODE DISTRIBUTION</p>
+
+<ul>
+<li>Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed.
+The technical packages timidity &amp; python-appindicator may help.
+Command line to install:
+</li>
+<li>Extract the donloaded file.</li>
+<li>Go to the directory , where the file  is placed.</li>
+<li>Run the command line: </li>
+<li>Python installs the source distribution.</li>
+<li>the program starts with the command:
+
+  --start-tna         Start the clock minimized in
+                      the Taskbar Notification Area.
+  --autostart-clock   Start the clock automatically.
+  --taskbar           Use the classic taskbar, instead
+                      of the application indicator.
+  --menu-time         Show the time not beside the
+                      taskbar indicator icon.
+                      (With --taskbar, this option
+                       will be ignored.)
+  --help              Show a little help.</li>
+<li>For a program starter icons are placed in  in the
+repisotory.</li>
+<li>If application indicator icon is not displayed, please copy the file
+ from the repository to
+.</li>
+</ul><p>REMOVE THE SOURCECODE DISTRIBUTION</p>
+
+<ul>
+<li>On a UBUNTU system delete follow directory and files
+with adminstrator rights:
+directory 
+file 
+file </li>
+</ul><p>DOCUMENTATION</p>
+
+<ul>
+<li>start the file /doxygen-docu/html/index.html of this repository.</li>
+</ul><p>GERMAN TRANSLATIONS</p>
+
+<ul>
+<li>PO files mfc1/pofiles/de/LC_MESSAGES/mfc1.po</li>
+<li>MO files mfc1/locale/de/LC_MESSAGES/mfc1.mo</li>
+<li>The work directory for follwing command is:
+</li>
+<li>Make a copy from the old file:
+</li>
+<li>Create a new .po file with pygettext:
+</li>
+<li>Merge the old into the new .po file:
+</li>
+<li>Make the translation, edit the .po file:
+
+<ul>
+<li>Replace  with
+.</li>
+<li>By editing the .PO file with the PO-Edit, you can optionally write
+the .MO file with saving the .po file.
+After this, yo just has to move the .mo file:
+</li>
+<li>Create the .mo file manually:
+</li>
+</ul>
+</li>
+</ul><p>CONCEPT, DESIGN
+  Marcus Möller
+  </p>
+
+<p>PROGRAM CODE
+  Andreas Ulrich
+  <a href="http://erasand.jimdo.com/kontakt/">http://erasand.jimdo.com/kontakt/</a>
+  </p>
+
+<p>ARTWORK
+  Marcus Möller (program icon)
+  The Tango Project (button icons)</p>
+
+<p>SOUND 
+   by Marcus Möller and the WakeUp community</p>
+
+<p>16.12.2013 / Andreas Ulrich, Marcus Möller</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MindfulClock maintained by <a href="https://github.com/ulrich3110">ulrich3110</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
