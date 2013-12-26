@@ -6,10 +6,10 @@ opportunity to pause, and enjoy the present moment in mindfulness.
 
 
 OPERATING SYSTEM
-- The MindfulClock is programmed in Python wiht the GUI toolkit
-  wxPython. It runs on all platforms which support python and
+- The MindfulClock is programmed in Python with the GUI toolkit
+  wxPython. It runs on all platforms which support Python and
   wxpython.
-- Its specially designed for Ubuntu.
+- It's specially designed for Ubuntu.
 
 
 RELEASE NOTES 1.0
@@ -19,7 +19,7 @@ RELEASE NOTES 1.0
 - Full clock control in the user interface.
 - Taskbar application.
 - Ubuntu integration with the Application indicator.
-- Art work and sound theme.
+- Artwork and sound theme.
 - Debian package.
 - Command line options
 - Sourcecode installation.
@@ -27,9 +27,9 @@ RELEASE NOTES 1.0
 
 
 DOWNLAD AND INSTALL DEBIAN PACKAGE
-- Go to the directory <deb>
-- Get the .deb package.
-  Klick on RAW view, the download will start.
+- Download the project archive
+- Extract the archive to a temporary folder
+- Open the <deb> directory
 - Run the .deb, the package <mfc1> will be installed.
 - You can start the clock with the menu entry, or with the command:
   <mindfulclock1 [OPTIONS]>
@@ -44,6 +44,28 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
                          will be ignored.)
     --help              Show a little help.
 
+
+USAGE
+MindfulClock offers several options. You can define the time interval,
+a text message that supports your practise and a bell sound. You can
+also disable either the text or the sound notification by clearing the
+relevant input box. All changes will be applied on the next startup of
+the clock (or by pressing the stop button and the start button again).
+
+The application brings an indicator applet which you will find in the
+upper right corner of your Ubuntu Unity desktop. If you are not using
+Unity, you could also start the application with the --start-tna 
+parameter, which will make use of the traditional systray instead.
+
+From the indicator icon, you can start, stop or pause the clock and
+open the main application window.
+
+MindfulClock can by configured to automatically start the clock on
+application startup and to start directly to the indicator applet.
+
+The main window can always be minimized to the applet by pressing the
+minimize button. Using the exit button will close the application.
+ 
 
 TROUBBLESHOTTING
 - Reset all setting: Delete the configuarion, the hidden file <.mfc1>
@@ -60,10 +82,9 @@ REMOVE THE SETTINGS
 
 
 DOWNLOAD SOURCECODE DISTRIBUTION FROM GITHUB
-- Go to the directory <dist>
-- Get the .tar.gz file.
-  Klick on RAW view, the download will start.
-
+- Download the project archive
+- Extract the archive to a temporary folder
+- Open the <dist> directory
 
 INSTALLATION THE SOURCECODE DISTRIBUTION
 - Make sure that Python 2.7, wxPython 2.8, PyGame 1.9 are installed.
