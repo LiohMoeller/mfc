@@ -46,24 +46,24 @@ DOWNLAD AND INSTALL DEBIAN PACKAGE
 
 
 USAGE
-  MindfulClock offers several options. You can define the time interval,
+- MindfulClock offers several options. You can define the time interval,
   a text message that supports your practise and a bell sound. You can
   also disable either the text or the sound notification by clearing the
   relevant input box. All changes will be applied on the next startup of
   the clock (or by pressing the stop button and the start button again).
 
-  The application brings an indicator applet which you will find in the
+- The application brings an indicator applet which you will find in the
   upper right corner of your Ubuntu Unity desktop. If you are not using
   Unity, you could also start the application with the --start-tna 
   parameter, which will make use of the traditional systray instead.
 
-  From the indicator icon, you can start, stop or pause the clock and
+- From the indicator icon, you can start, stop or pause the clock and
   open the main application window.
 
-  MindfulClock can by configured to automatically start the clock on
+- MindfulClock can by configured to automatically start the clock on
   application startup and to start directly to the indicator applet.
 
-  The main window can always be minimized to the applet by pressing the
+- The main window can always be minimized to the applet by pressing the
   minimize button. Using the exit button will close the application.
  
 
@@ -155,23 +155,23 @@ GERMAN TRANSLATIONS
 
 
 CONCEPT, DESIGN
-  Marcus Möller
+- Marcus Möller
   <marcus.moeller[AT]ubuntu[DOT]com>
 
 
 PROGRAM CODE
-  Andreas Ulrich
+- Andreas Ulrich
   <http://erasand.jimdo.com/kontakt/>
   <ulrich3110[AT]gmail[DOT]com>
 
 
 ARTWORK
-  Marcus Möller (program icon)
+- Marcus Möller (program icon)
   The Tango Project (button icons)
 
 
 SOUND 
-  <pv-bell.ogg> by Marcus Möller and the WakeUp community
+- <pv-bell.ogg> by Marcus Möller and the WakeUp community
 
 
 16.12.2013 / Andreas Ulrich, Marcus Möller
