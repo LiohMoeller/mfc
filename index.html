@@ -37,36 +37,19 @@
 During the day, it will periodically invite the bell and gives you the
 opportunity to pause, and enjoy the present moment in mindfulness.</p>
 <h4>Operating System</h4>
-<ul>
-<li>The MindfulClock is programmed in Python with the GUI toolkit
+The MindfulClock is programmed in Python with the GUI toolkit
 wxPython. It runs on all platforms which support Python and
-wxpython.</li>
-<li>It's specially designed for Ubuntu.</li>
-</ul>
-<h4>Release Notes 1.0</h4>
-<ul>
-<li>Notification with text or sound.</li>
-<li>Specification by user: Time interval in minutes, text notification,
-sound notification, pause function.</li>
-<li>Full clock control in the user interface.</li>
-<li>Taskbar application.</li>
-<li>Ubuntu integration with the Application indicator.</li>
-<li>Artwork and sound theme.</li>
-<li>Debian package.</li>
-<li>Command line options</li>
-<li>Sourcecode installation.</li>
-<li>Internationalisation with pygettext.</li>
-</ul>
+wxpython. But it's specially designed for Ubuntu.
 <h2>Installation</h2>
 MindfulClock can either be installed using a debian package, or using the python Sourcecode distribution method.
 On a Debian or Ubuntu based system, we recommend to install the debian package.
 <h3>Package installation</h3>
 <h4>Download and install the Debian package</h4>
 <ul>
-<li>Download the project archive</li>
-<li>Extract the archive to a temporary folder</li>
-<li>Open the &lt;deb&gt; directory</li>
-<li>Run the .deb, the package  will be installed.</li>
+<li>Click on the &lt;deb&gt; download link.</li>
+<li>Save the file on your local disk</li>
+<li>Open your filemanager and change to the folder where you have downloaded the package to.</li>
+<li>Click on the .deb package. Your package manager should prompt you to install the package.</li>
 <p>You can now start the clock from the menu entry, or with the command:</p>
 <pre>
 &lt;mindfulclock1 [OPTIONS]&gt;
@@ -84,11 +67,13 @@ On a Debian or Ubuntu based system, we recommend to install the debian package.
 </pre>
 </ul>
 <h3>Sourcecode Installation</h3>
-<h4>Download Sourcecode Distribution from Github</h4>
+<h4>Download Sourcecode Distribution</h4>
 <ul>
-<li>Download the project archive</li>
-<li>Extract the archive to a temporary folder</li>
-<li>Open the &lt;dist&gt; directory</li>
+<li>Click on the &lt;src&gt; download link.</li>
+<li>Save the file on your local disk.</li>
+<li>Open a terminal and change to the folder where you have downloaded the archive to.</li>
+<li>Extract the archive using tar xvzf followed by the archive name.</li>
+<li>Change to the newly created directory.</li>
 </ul>
 <h4>Install the Sourcecode Distribution</h4>
 <ul>
@@ -98,9 +83,7 @@ Command line to install:
 <p>&lt;sudo apt-get install python python-wxgtk2.8 python-pygame&gt;</br>
 &lt;sudo apt-get install timidity python-appindicator&gt;</p>
 </li>
-<li>Extract the archive within the &lt;dist&gt; directory.</li>
-<li>Change to the newly created directory, where the file &lt;setup.py&gt; is placed.</li>
-<li>Run the command line: &lt;sudo ./setup.py install&gt;</li>
+<li>Run the command: &lt;sudo ./setup.py install&gt;.</li>
 <p>Python now installs the source distribution. You can now start the program
 with the command:</p>
 <pre>
@@ -118,7 +101,7 @@ with the command:</p>
   --help              Show a little help.
 </pre>
 <li>For a program starter, icons are placed in &lt;/mfc1/icons&gt; in the
-repisotory.</li>
+repository.</li>
 <li>If the application indicator icon is not displayed, please copy the file 
 &lt;/pixmaps/alarm-clock-indicator.png&gt; from the repository to
 &lt;/usr/share/pixmaps&gt;.</li>
